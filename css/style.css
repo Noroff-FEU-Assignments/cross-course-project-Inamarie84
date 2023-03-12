@@ -3,6 +3,20 @@
     src: url("https://fonts.googleapis.com/css2?family=Inria+Sans&family=Roboto&display=swap");
 }
 
+body, 
+h1,
+h2 {
+    font-family: "inria sans", Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.logo {
+    max-width: 150px;
+}
+
+.logo_about {
+    max-width: 300px;
+}
+
 .BackgroundPictureMain {
     background-image:url(/images/BackgroundPictureMain.jpg);
     background-size:cover;
@@ -16,11 +30,6 @@
     color: #fff;
 }
 
-body, 
-h1,
-h2 {
-    font-family: "inria sans", Verdana, Geneva, Tahoma, sans-serif;
-}
 
 
 .IntroMen {
@@ -28,6 +37,17 @@ h2 {
     background-size:cover;
     color:#fff;
     background-position:center;
+}
+
+.IntroWomen {
+    background-image: url(/images/BackgroundPictureWomen.jpg);
+    background-size: cover;
+    color:#fff;
+    background-position:center;
+}
+
+.Jackets {
+    color: #393D40;
 }
 
 header {
