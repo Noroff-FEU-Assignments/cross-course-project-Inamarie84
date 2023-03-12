@@ -1,0 +1,39 @@
+@font-face {
+    font-family: "inria sans";
+    src: url("https://fonts.googleapis.com/css2?family=Inria+Sans&family=Roboto&display=swap");
+}
+
+.BackgroundPictureMain {
+    background-image:url(/images/BackgroundPictureMain.jpg);
+    background-size:cover;
+    background-attachment: fixed;
+    background-position: center;
+    color: #393D40;
+}
+
+.cb {
+    background-color: #0A3641;
+    color: #fff;
+}
+
+body, 
+h1,
+h2 {
+    font-family: "inria sans", Verdana, Geneva, Tahoma, sans-serif;
+}
+
+
+.IntroMen {
+    background-image: url(/images/BackgroundPictureMen.jpg);
+    background-size:cover;
+    color:#fff;
+    background-position:center;
+}
+
+header {
+    color: #0A3641;
+}
+
+footer {
+    color: #000000;
+}
