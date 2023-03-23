@@ -3,57 +3,193 @@
     src: url("https://fonts.googleapis.com/css2?family=Inria+Sans&family=Roboto&display=swap");
 }
 
+/* All Pages*/
+
 body, 
 h1,
-h2 {
+h2,
+footer {
     font-family: "inria sans", Verdana, Geneva, Tahoma, sans-serif;
 }
 
-.logo {
-    max-width: 150px;
+body {
+    color: #393D40;
 }
+
+/* Header/Nav */
+
+header a {
+    text-decoration: none;
+    color: #0A3641;
+}
+
+nav,
+#menu_checkbox {
+    display: none;
+}
+
+#menu_checkbox:checked ~ nav {
+    display: block;
+}
+
+header {
+    position: relative;
+    background: #fff;
+    color: #0A3641;
+    padding: 10px;
+    font-size: 1.5rem;
+}
+
+nav {
+    position: absolute;
+    background: #fff;
+    left: 0px;
+}
+
+nav li {
+    display: inline-block;
+    text-transform: uppercase;
+    text-decoration: underline;
+    color: #0A3641;
+    padding: 10px 20px; 
+    font-size: 1rem;
+}
+
+.hamburger_icon {
+    display: none;
+}
+
+.current {
+    background-color: #E0DDD9;
+    padding: 8px 20px;
+}
+
+.logo {
+    max-width: 120px;
+}
+
+/* Home Page */
+
+.BackgroundPictureMain {
+    background-image:url(../images/BackgroundPictureMain.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    min-height: 80vh;
+    color: #393D40;
+    font-size: 2rem;
+}
+
+.heading2 {
+    font-size: 1.6rem;
+}
+
+.cbm,
+.cbw {
+    background-color: #0A3641;
+    text-decoration: none;
+    color: #fff;
+    font-size: 0.4em;
+    text-transform: uppercase;
+    border-radius: 3px;
+    margin: 10px;
+}
+
+.cbm {
+    padding: 8px 30px;
+}
+
+.cbw {
+    padding: 8px 20.5px;
+}
+
+/* Men, Women */
+
+.Intro_men {
+    background-image: url(../images/BackgroundPictureMen.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: center;
+    min-height: 250px; 
+    color: #fff;
+}
+
+.Product_images {
+    max-width: 30vh;
+}
+
+.Intro_women {
+    background-image: url(../images/BackgroundPictureWomen.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: center;
+    min-height: 250px;
+    color: #fff;
+}
+
+.Featured_products {
+    color: #393D40;
+}
+
+/* about */
 
 .logo_about {
     max-width: 300px;
 }
 
-.BackgroundPictureMain {
-    background-image:url(/images/BackgroundPictureMain.jpg);
-    background-size:cover;
-    background-attachment: fixed;
-    background-position: center;
-    color: #393D40;
+/* Contact Page */
+
+.cb_submit {
+    text-transform: uppercase;
+    background-color: #393D40;
+    color:#fff;
+    margin: 10px;
+    padding: 8px 60px;
+    border-radius: 3px;
 }
 
-.cb {
-    background-color: #0A3641;
+/* Specific Product*/
+
+.BackgroundPictureProduct {
+    background-image:url(../images/BackgroundPictureSpecificProduct.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+.specific_product {
+    max-width: 40vh;
+    margin: 60px;
+    border: 1em solid #F2F2F0;
+}
+
+.cb_add {
+    background-color: #D81D1D;
     color: #fff;
 }
 
-
-
-.IntroMen {
-    background-image: url(/images/BackgroundPictureMen.jpg);
-    background-size:cover;
-    color:#fff;
-    background-position:center;
-}
-
-.IntroWomen {
-    background-image: url(/images/BackgroundPictureWomen.jpg);
-    background-size: cover;
-    color:#fff;
-    background-position:center;
-}
-
-.Jackets {
-    color: #393D40;
-}
-
-header {
-    color: #0A3641;
-}
+/* Footer */
 
 footer {
     color: #000000;
+    text-align: center;
+}
+
+footer li {
+    display: inline-block;
+    padding: 0.2em 2em;
+}
+
+
+/* Media@*/
+
+@media (min-width: 600px){
+    nav {
+        display: block;
+        position: static;
+    }
 }

@@ -9,17 +9,23 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inria+Sans&family=Roboto&display=swap" rel="stylesheet">
   <link href="css/style.css" rel="stylesheet" />
+  <script src="https://kit.fontawesome.com/eb56cff7a8.js" crossorigin="anonymous"></script>
 </head>
 <body>
   <header>
+    <input type="checkbox" id="menu_checkbox" />
+    <label for="menu_checkbox" class="hamburger_icon"><i class="fa-sharp fa-solid fa-bars"></i></label>
     <img src="images/RainyDays_Logo.png" alt="Logo of RainyDays.com" class=logo />
     <nav>
       <ul>
-        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html" class="current">Home</a></li>
         <li><a href="men.html">Men</a></li>
         <li><a href="women.html">Women</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="contact.html">Contact</a></li>
+        <li><i class="fa-sharp fa-regular fa-heart"></i></li>
+        <li><i class="fa-solid fa-magnifying-glass"></i></li>
+        <li><i class="fa-regular fa-cart-shopping"></i></li>
       </ul>
     </nav>
   </header>
@@ -27,20 +33,28 @@
   <section>
     <h1>Our Extremely Waterproof And Breathable Rain Gear Keeps You Dry On The Wettest Days</h1>
   </section>
-  <section>
-    <div>
+  <section class="heading2">
       <h2>Suitable For Any Outdoor Adventure</h2>
-      <ul>
-        <li><a href="men.html">Shop Men's</a></li>
-        <li><a href="women.html">Shop Women's</a></li>
-      </ul>
-    </div>
+  </section>
+  <section class="cbmain">
+      <div>
+        <a href="men.html" class="cbm">Shop Men's</a>
+      </div>
+      <div>
+        <a href="women.html" class="cbw">Shop Women's</a>
+      </div>
   </section>
 </main>
    <footer>
-    <div>2022 Rainydays, inc &copy;</div>
-<div>Free Shipping | Free returns</div>
-<div>Follow us on Social Media</div>
+    <ul>
+        <li>2022 Rainydays, inc &copy;</li>
+        <li>Free Shipping | Free returns</li>
+        <li>Follow us on Social Media</li>
+    </ul>
+    <i class="fa-brands fa-twitter"></i>
+    <i class="fa-brands fa-facebook-messenger"></i>
+    <i class="fa-brands fa-instagram"></i>
+    <i class="fa-brands fa-facebook"></i>
 </footer>
 </body>
 </html>
