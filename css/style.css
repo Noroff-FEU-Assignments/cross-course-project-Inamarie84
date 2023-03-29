@@ -13,6 +13,10 @@ footer {
 }
 
 body {
+    min-height: 100vh;
+    margin: 0px;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
     color: #393D40;
 }
 
@@ -32,12 +36,19 @@ nav,
     display: block;
 }
 
+nav a {
+    display: block;
+}
+
 header {
     position: relative;
+    display: flex;
+    align-items: center;
     background: #fff;
     color: #0A3641;
     padding: 10px;
     font-size: 1.5rem;
+    margin-left: 25px;
 }
 
 nav {
@@ -65,18 +76,19 @@ nav li {
 }
 
 .logo {
-    max-width: 120px;
+    max-width: 100px;
 }
 
 /* Home Page */
 
-.BackgroundPictureMain {
+.BackgroundPictureMain,
+.BackgroundPictureAbout {
     background-image:url(../images/BackgroundPictureMain.jpg);
     background-size: cover;
     background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: center;
-    min-height: 80vh;
+    background-position-x: top;
+    background-position-y: bottom;
+    min-height: 100vh;
     color: #393D40;
     font-size: 2rem;
 }
@@ -106,6 +118,32 @@ nav li {
 
 /* Men, Women */
 
+.men,
+.women {
+    margin: auto;
+}
+
+.featured_products {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-gap: 10px;
+    margin: 10px auto 10px;
+}
+
+.featured_products img {
+    width: 100%;
+}
+
+.product {
+    background-color: #F2F2F0;
+    border-radius: 5px;
+}
+
+.item {
+    margin: 10px;
+    padding: 20px;
+}
+
 .Intro_men {
     background-image: url(../images/BackgroundPictureMen.jpg);
     background-size: cover;
@@ -114,6 +152,9 @@ nav li {
     background-position-y: center;
     min-height: 250px; 
     color: #fff;
+    font-size: 1em;
+    text-align: left;
+    line-height: 1.5;
 }
 
 .Product_images {
@@ -128,6 +169,9 @@ nav li {
     background-position-y: center;
     min-height: 250px;
     color: #fff;
+    font-size: 1em;
+    text-align: left;
+    line-height: 1.5;
 }
 
 .Featured_products {
@@ -136,18 +180,96 @@ nav li {
 
 /* about */
 
+
 .logo_about {
+    display: block;
     max-width: 300px;
+    margin: auto;
+}
+
+.AboutRainyDays,
+.AboutInfo {
+    background-color: rgba(242, 242, 240, 70%);
+    padding: 20px;
+    margin: 60px;  
+    font-size: 0.5em;
+    line-height: 1.5;
+}
+
+.HeadingInfo {
+    font-size: 1em;
+}
+
+.info {
+    font-size: 0.8em;
+    text-transform: capitalize;
+    text-decoration: underline;
 }
 
 /* Contact Page */
 
+.BackgroundPictureContact {
+    background-image: url(../images/BackgroundPictureMain.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-x: top;
+    background-position-y: bottom;
+    min-height: 100vh;
+}
+
+.contact_h1 {
+    text-decoration: underline;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 2rem;
+}
+
+.contact_h2 {
+    text-transform: capitalize;
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+.contact_p {
+    text-align: center;
+    font-size: 1rem;
+}
+
+label {
+    margin: 10px 5px 0px 60px;
+}
+
+input, 
+select,
+textarea {
+    border-radius: 3px;
+    border: 0px;
+    margin: 10px 60px;
+    padding: 10px;
+}
+
+.contact_form {
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(242, 242, 240, 70%);
+    text-align: left;
+    margin: 100px auto;
+    max-width: 1000px;
+}
+
+.contact_input {
+    display: flex;
+    flex-direction: column;
+}
+
 .cb_submit {
+    display: flex;
+    justify-content: center;
     text-transform: uppercase;
     background-color: #393D40;
     color:#fff;
-    margin: 10px;
-    padding: 8px 60px;
+    margin: 10px auto 30px;
+    padding: 12px 100px;
     border-radius: 3px;
 }
 
@@ -159,18 +281,35 @@ nav li {
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center;
+    position: relative;
+    min-height: 100vh;
 }
 
-.specific_product {
-    max-width: 40vh;
-    margin: 60px;
-    border: 1em solid #F2F2F0;
+.SpecificProductJacket {
+    background-color: rgba(242, 242, 240, 90%);
+    max-width: 1000px;
+    margin: 50px auto;
+    padding: 100px;
+    line-height: 1.5;
+}
+
+.SpecificProductJacket li {
+    display: inline-block;
+}
+
+.SelectSize {
+    color: #D81D1D;
 }
 
 .cb_add {
     background-color: #D81D1D;
     color: #fff;
+    text-decoration: none;
+    border-radius: 3px;
+    margin: 40px 10px;
+    padding: 8px 60px;
 }
+
 
 /* Footer */
 
@@ -193,3 +332,4 @@ footer li {
         position: static;
     }
 }
+

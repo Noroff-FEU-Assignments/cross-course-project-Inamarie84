@@ -24,14 +24,13 @@
           </ul>
         </nav>
       </header>
-      <main>
-      <section>
-        <h1>Contact Rainy Days</h1>
-        <h2>Do you have a question for our Rainy Days team?</h2>
-        <p>Contact our customer service by filling out this form. Estimated reply time is 2-3 business days: </p>
-      </section>
+      <main class="BackgroundPictureContact">
+      <section class="contact_form">
+        <h1 class="contact_h1">Contact Rainy Days</h1>
+        <h2 class="contact_h2">Do you have a question for our Rainy Days team?</h2>
+        <p class="contact_p">Contact our customer service by filling out this form. Estimated reply time is 2-3 business days: </p>
       <form method="POST">
-        <fieldset>
+        <div class="contact_input">
           <label for="topic">Topic</label>
           <input type="text" id="topic" name="topic" />
           <label for="lastname">Last Name</label>
@@ -46,20 +45,23 @@
           <input type="tel" id="phone" name="phone" />
           <label for="message">Enter your question here</label>
           <textarea id="message" name="message"></textarea>
+        </div>
+        <div class="contact_submit">
           <input type="submit" value="Submit" class="cb_submit" />
-        </fieldset>
+        </div>
+          </section>
       </form>
+    </section>
     </main>
     <footer>
       <ul>
         <li>2022 Rainydays, inc &copy;</li>
         <li>Free Shipping | Free returns</li>
-        <li>Follow us on Social Media</li>
+        <li>Follow us on Social Media <i class="fa-brands fa-twitter"></i>
+          <i class="fa-brands fa-facebook-messenger"></i>
+          <i class="fa-brands fa-instagram"></i>
+          <i class="fa-brands fa-facebook"></i></li>
       </ul>
-      <i class="fa-brands fa-twitter"></i>
-      <i class="fa-brands fa-facebook-messenger"></i>
-      <i class="fa-brands fa-instagram"></i>
-      <i class="fa-brands fa-facebook"></i>
     </footer>
 </body>
 </html>
