@@ -5,54 +5,62 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rainy Days | About</title>
-    <link href="css/style.css" rel="stylesheet" />
+    <link href="../css/style.css" rel="stylesheet" />
     <script src="https://kit.fontawesome.com/eb56cff7a8.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <header>
-      <a href="/index.html"><img src="../images/RainyDays_Logo.png" alt="Logo of RainyDays.com" class="logo"> </a>
+        <img src="/images/RainyDays_Logo.png" alt="Logo of RainyDays.com" class="logo" />
+        <input type="checkbox" id="menu_checkbox" />
+        <label for="menu_checkbox" class="hamburger-icon"><i class="fa-sharp fa-solid fa-bars"></i></label>
+        <div class="nav">
+          <div class="links">
+            <ul>
+              <li><a href="/index.html">Home</a></li>
+              <li><a href="/men.html">Men</a></li>
+              <li><a href="/women.html">Women</a></li>
+              <li><a href="/about.html" class="active">About</a></li>
+              <li><a href="/contact.html">Contact</a></li>
+            </ul>
+          </div>
+        </div>
         <nav>
           <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="men.html">Men</a></li>
-            <li><a href="women.html">Women</a></li>
-            <li><a href="about.html" class="current">About</a></li>
-            <li><a href="contact.html">Contact</a></li>
-            <li><i class="fa-sharp fa-regular fa-heart"></i></li>
+            <li><i class="fa-solid fa-regular fa-heart"></i></li>
             <li><i class="fa-solid fa-magnifying-glass"></i></li>
             <li><i class="fa-solid fa-cart-shopping"></i></li>
           </ul>
         </nav>
       </header>
-      <main class="BackgroundPictureAbout">
-      <section class="about_rd">
-        <img src="images/RainyDays_Logo.png" alt="Logo of RainyDays.com" class=logo_about /> 
+      <main class="background">
+      <section class="about">
+        <img src="/images/RainyDays_Logo.png" alt="Logo of RainyDays.com" class="logo_about" /> 
         <h1>About Rainy Days</h1>
         <div>
-          <p>
+          <p class="infotext">
           From our home in Norway, Rainy Days has been making professional grade rain gear to help people stay dry and feel alive for more than 140 years. It all started in 1877 when a sea captain found a better way to stay protected from the harsh Norwegian elements. Soon thereafter, the captain and his wife launched a business producing waterproof jackets made from coarse linen soaked in linseed oil – and the legend was born!
-          Rainy Days jackets are worn and trusted by people needing protection from the rain. Our jackets are durability and and suitable for all types of weather and adventures, and are made from our most innovative and sustainable waterproof/breathable technology to date
+          Rainy Days jackets are worn and trusted by people needing protection from the rain. Our jackets are durability and and suitable for all types of weather and adventures, and are made from our most innovative and sustainable waterproof/breathable technology to date.
           </p>
         </div>
       </section>
-      <section class="about_info">
+      <section class="about information">
       <div>
         <p><i class="fa-solid fa-location-dot"></i></i></p>
-        <h2 class="h2_about">FIND A RAINY DAYS STORE</h2>
-        <p>Locate a brand store, partner store or retail partner in your area.</p>
-        <p class="info">FIND A STORE</p>
+        <h2 >Find a Rainy Days store</h2>
+        <p class="infotext">Locate a brand store, partner store or retail partner in your area.</p>
+        <p class="info">Find a store</p>
       </div>
       <div>
         <p><i class="fa-solid fa-envelope"></i></p>
-        <h2 class="h2_about">BE THE FIRST TO KNOW</h2>
-        <p>Subscribe to receive new product releases, exclusive discount codes, invites to events and a chance to win.</p>
-        <p class="info">SIGN UP FOR E-MAILS</p>
+        <h2>Be the first to know</h2>
+        <p class="infotext">Subscribe to receive new product releases, exclusive discount codes, invites to events and a chance to win.</p>
+        <p class="info">Sign up for e-mails</p>
       </div>
       <div>
         <p><i class="fa-solid fa-circle-info"></i></p>
-        <h2 class="h2_about">CUSTOMER SUPPORT CENTRE</h2>
-        <p>Need more information? Have a repair concern? No problem. We're here to help.</p>
-        <p class="info">FIND ANSWERS</p>
+        <h2>Customer Support Centre </h2>
+        <p class="infotext">Need more information? Have a repair concern? No problem. We're here to help.</p>
+        <p class="info">Find answers</p>
       </div>
       </section>
       </main>
