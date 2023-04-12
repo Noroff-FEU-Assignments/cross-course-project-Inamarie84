@@ -17,6 +17,7 @@ body {
 /* --------------- Header & Logo --------------- */
 /* Header */
 header {
+    position: relative;
     display: flex;
     background: #fff;
     color: #0A3641;
@@ -26,6 +27,16 @@ header {
     justify-content: space-between;
     flex-wrap: wrap;
   }
+
+.nav .links {
+    position: absolute;
+    top: 10px;
+    left: 200px;
+}
+
+.nav .links a {
+    display: block;
+}
 
 /* Logo */
 .logo {
@@ -52,7 +63,7 @@ header .nav .links ul li a:hover{
 
 /* Home Men Women About Contact*/
 header .nav .links ul li {
-  display: inline-flex;
+  display: inline-block;
   margin: auto 25px;
 }
 
@@ -71,16 +82,12 @@ nav ul li {
   
 
 /* Hamburger menu*/
-#menu_checkbox {
+nav #menu_checkbox {
     display: none;
 }
 
 #menu_checkbox:checked ~ nav {
     display: block;
-}
-
-.hamburger_icon {
-    display: none;
 }
 
 
@@ -153,11 +160,12 @@ section {
 
 /* Men */
 .intro-men {
-    background-image: url(../images/BackgroundPictureMen.jpg);
+    background: url(../images/BackgroundPictureMen.jpg) center no-repeat;
     background-size: cover;
-    background-repeat: no-repeat;
-    background-position-x: center;
-    background-position-y: center;
+}
+
+.intro-men,
+.intro-women {
     min-height: 250px; 
     line-height: 1.5;
     margin-left: 0px;
@@ -169,7 +177,7 @@ section {
     font-size: 1.6rem;
     text-align: left;
     margin: 25px;
-    padding: 20px;
+    padding: 5px;
 }
 
 .featured_products {
@@ -210,16 +218,10 @@ section {
 }
 
 
-/* woman */
+/* women */
 .intro-women {
-    background-image: url(../images/BackgroundPictureWomen.jpg);
+    background: url(../images/BackgroundPictureWomen.jpg) center no-repeat;
     background-size: cover;
-    background-repeat: no-repeat;
-    background-position-x: center;
-    background-position-y: center;
-    min-height: 250px; 
-    line-height: 1.5;
-    margin-left: 0px;
 }
 
 
@@ -255,7 +257,8 @@ section {
 }
 
 /* Specific Product*/
-.flex-container {
+.flex-container,
+.flex-container2 {
     width: 1000px;
     height: auto;
     display: flex;
@@ -266,7 +269,8 @@ section {
     margin: 100px; /* add margin */
 }
 
-.flex-child {
+.flex-child,
+.flex-child2 {
     flex: 1;
     align-self: stretch; /* make elements the same height */
     padding: 50px;
@@ -301,7 +305,8 @@ section {
 }
 
 /* Contact */
-.contact_h1 {
+.contact_h1,
+.order_h1 {
     text-decoration: underline;
     text-transform: uppercase;
     text-align: center;
@@ -335,7 +340,8 @@ textarea {
     padding: 10px;
 }
 
-.contact_form {
+.contact_form,
+.order_form {
     display: flex;
     flex-direction: column;
     background-color: rgba(242, 242, 240, 70%);
@@ -351,33 +357,6 @@ textarea {
 
 /* Checkout-shopping cart */
 
-.flex-container2 {
-    width: 1000px;
-    height: auto;
-    display: flex;
-    justify-content: center; /* center horizontally */
-    align-items: center; /* center vertically */
-    background-color: rgba(242, 242, 240, 80%);
-    color: #393D40;
-    margin: 100px;
-}
-
-.flex-child2 {
-    flex: 1;
-    align-self: stretch; /* make elements the same height */
-    padding: 10px;
-    margin: 40px;
-}  
-
-.flex-child2:first-child {
-    margin-right: 20px;
-}
-
-.product_images {
-    width: 90%;
-    height: 50%;
-}
-
 .featured_products_sc {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -391,13 +370,10 @@ textarea {
     text-align: center;
     margin: auto;
     background-color: #F2F2F0;
-    margin-top: 30px;
     width: 1000px;
 }
 
-.b_sc {
-    margin-top: 60px;
-}
+
 
 /* Checkout success */
 
@@ -435,20 +411,24 @@ textarea {
     margin: 5px 15px;
 }
 
+/* Order */
+
+.order {
+    text-align: left;
+    margin-left: 60px;
+}
 
 /* background for index, about, contact, checkout, checkoutsuccess */
 .background {  /* index, about, contact har fått samme main class siden det er samme background */
-    background-image: url("../images/BackgroundPictureMain.jpg");
+    background: url("../images/BackgroundPictureMain.jpg") left no-repeat;
     background-size: cover;
-    background-repeat: no-repeat;
-    background-position: left;
     min-height: 100vh;
 }
 
 
 /* background for specificproduct*/
 .bg-product {
-    background-image:url(../images/BackgroundPictureSpecificProduct.jpg);
+    background-image: url(../images/BackgroundPictureSpecificProduct.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position-x: top;
@@ -458,6 +438,8 @@ textarea {
     justify-content: center; /* center horizontally */
     align-items: center; /* center vertically */
 }
+
+
 
 
 /* Buttons */
@@ -539,7 +521,13 @@ textarea {
     background-color: #59CA64;
 }
 
+.cta_o button {
+    margin: 40px auto;
+}
 
+.cta_sp {
+    margin-left: 60px;
+}
 
 
 /* --------------- Footer--------------- */
@@ -597,9 +585,21 @@ footer p {
         flex-direction: column;
     }
 
+    .nav .links a {
+        display: block;
+        position: static;
+    }
+
 
  
 }
 
 
-@media (min-width: 800px)
+@media (min-width: 800px) {
+
+    .hamburger_icon {
+        display: none;
+    }
+ 
+
+}
