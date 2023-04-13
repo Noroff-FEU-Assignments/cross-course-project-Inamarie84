@@ -257,8 +257,7 @@ section {
 }
 
 /* Specific Product*/
-.flex-container,
-.flex-container2 {
+.flex-container {
     width: 1000px;
     height: auto;
     display: flex;
@@ -269,8 +268,7 @@ section {
     margin: 100px; /* add margin */
 }
 
-.flex-child,
-.flex-child2 {
+.flex-child {
     flex: 1;
     align-self: stretch; /* make elements the same height */
     padding: 50px;
@@ -293,7 +291,7 @@ section {
 }
 
 .sp {
-    line-height: 1.4;
+    line-height: 1.6;
 }
 
 .section1 ul li {
@@ -555,24 +553,25 @@ footer p {
         text-align: center;
     }
 
-    .main_page h1 {
-        font-size: 1.4rem;
+    section {
+        margin: 0px 40px;
+        padding: 5px;
         text-align: center;
-        margin: 10px 0px;
+    }
+
+    .main_page h1 {
+        font-size: 2rem; 
     }
 
     .main_page h2 {
         font-size: 1.6rem;
-        text-align: center;
-        margin: 10px 0px;
     }
 
     .main_page h3 {
-        color: #F2F2F0;
         font-size: 1.4rem;
-        text-shadow: 2px 4px 4px #393D40;
-        text-align: center;
     }
+     
+
     .featured_products, 
     .featured_products_sc {
         grid-template-columns: repeat(1, minmax(0, 1fr));
