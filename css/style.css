@@ -82,12 +82,16 @@ nav ul li {
   
 
 /* Hamburger menu*/
-nav #menu_checkbox {
+#menu_checkbox {
     display: none;
 }
 
 #menu_checkbox:checked ~ nav {
     display: block;
+}
+
+.hamburger-icon {
+    display: none;
 }
 
 
@@ -102,7 +106,7 @@ section {
 /* --------------- headings --------------- */
 
 .main_page h1 {
-    font-size: 3rem;
+    font-size: 4rem;
     color: #0A3641;
     margin: auto;
     padding: 20px;
@@ -119,14 +123,6 @@ section {
     font-size: 2rem;
     font-style: italic;
     margin-bottom: 50px;
-}
-
-.about h1 {
-    font-size: 2.2rem;
-    color: #393D40;
-    font-weight: lighter;
-    text-transform: capitalize;
-    text-align: left;
 }
 
 .about h2,
@@ -174,7 +170,7 @@ section {
 .productpage section h1,
 .productpage section h2 {
     color: #fff;
-    font-size: 1.6rem;
+    font-size: 1.8rem;
     text-align: left;
     margin: 25px;
     padding: 5px;
@@ -303,6 +299,7 @@ section {
 }
 
 /* Contact */
+.about h1,
 .contact_h1,
 .order_h1 {
     text-decoration: underline;
@@ -589,16 +586,13 @@ footer p {
         position: static;
     }
 
-
+    .hamburger-icon {
+        display: block;
+    }
  
 }
 
 
 @media (min-width: 800px) {
 
-    .hamburger_icon {
-        display: none;
-    }
  
-
-}
