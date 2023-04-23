@@ -9,33 +9,30 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inria+Sans&family=Roboto&display=swap" rel="stylesheet">
   <link href="css/style.css" rel="stylesheet" />
+  <link href="../css/media.css" rel="stylesheet" />
   <script src="https://kit.fontawesome.com/eb56cff7a8.js" crossorigin="anonymous"></script>
 </head>
 <body>
   <header>
     <a href="/index.html"><img src="../images/RainyDays_Logo.png" alt="Logo of RainyDays.com" class="logo"></a>
-    <input type="checkbox" id="menu_checkbox" />
-    <label for="menu_checkbox" class="hamburger-icon"><i class="fa-sharp fa-solid fa-bars"></i></label>
-    <div class="nav">
-      <div class="links">
-        <ul>
-          <li><a href="index.html" class="active">Home</a></li>
-          <li><a href="/men.html">Men</a></li>
-          <li><a href="/women.html">Women</a></li>
-          <li><a href="/about.html">About</a></li>
-          <li><a href="/contact.html">Contact</a></li>
-        </ul>
-      </div>
+      <input type="checkbox" id="menu-checkbox" />
+        <div class="nav">
+          <nav class="links">
+            <a href="index.html" class="active">Home</a>
+            <a href="/pages/men.html">Men</a>
+            <a href="/pages/women.html">Women</a>
+            <a href="/pages/about.html">About</a>
+            <a href="/pages/contact.html">Contact</a>
+          </nav>
+        </div>
+      <div class="icons">
+        <i class="fa-solid fa-regular fa-heart"></i>
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <a href="/Pages/checkout.html" class="cart"><i class="fa-solid fa-cart-shopping"></i></a>
+        <label for="menu-checkbox" class="hamburger-menu"><i class="fas fa-bars fa-xl"></i></label>
     </div>
-    <nav>
-      <ul>
-        <li><i class="fa-solid fa-regular fa-heart"></i></li>
-        <li><i class="fa-solid fa-magnifying-glass"></i></li>
-        <li><i class="fa-solid fa-cart-shopping"></i></li>
-      </ul>
-    </nav>
-  </header>
-  <main class="background main_page">
+  </header>  
+  <main class="background main-page">
   <section>
     <h1>X Pushing The Comfort Zone X</h1>
   </section>
@@ -45,12 +42,12 @@
   <section>
       <h3>Suitable For Any Outdoor Adventure</h2>
   </section>
-  <section class="cta_buttons">
+  <section class="cta-buttons">
       <div>
-        <button class="cta"><a href="/men.html">Shop Men's</a></button>
+        <button class="cta"><a href="/pages/men.html">Shop Men's</a></button>
       </div>
       <div>
-        <button class="cta"><a href="/women.html">Shop Women's</a></button>
+        <button class="cta"><a href="/pages/women.html">Shop Women's</a></button>
       </div>
   </section>
 </main>
