@@ -30,7 +30,7 @@
       margin: auto;
     }
 
-    .main-page section button {
+    .main-page .cta-buttons a {
       margin-left: 40px;
     }
 
@@ -96,7 +96,6 @@
   
 @media (min-width: 769px) {
 
-
   .hamburger-menu {
           display: none;
       }
@@ -133,7 +132,11 @@
       text-align: center;
     }
     input, select, textarea {
-      margin: 5px 20px;
+      margin: 10px 20px;
+    }
+
+    .order, .contact-input label {
+      margin-left: 25px;
     }
   }
   
