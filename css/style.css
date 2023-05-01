@@ -60,24 +60,26 @@ header {
   display: block;
 }
 
+.hamburger-menu {
+  display: none;
+}
+
 .nav {
-  position: absolute;
-  background-color: var(--color-main);
-  top: 99px;
-  right: 0px;
-  width: 35%;
-  text-align: center;
-  border-radius: 5px;
-  border-style: ridge;
-  border-color: var(--color-background);
-  border-width: 2px;
+  display: flex;
+  flex: 4;
+  justify-content: center;
+  position: static;
+  font-size: 16px;
+  border-style: none;
+  margin: auto;
 }
 
 .links a {
-  display: block;
-  color: var(--color-theme);
-  padding: 10px 20px;
+  display: inline-block;
   text-decoration: none;
+  color: var(--color-theme);
+  padding: 10px;
+  margin: 10px;
 }
 
 .icons i {
@@ -126,14 +128,10 @@ section {
 .main-page h3 {
   font-size: 30px;
   font-style: italic;
+  text-shadow: 2px 4px 4px #c1beba;
 }
 
-/* Men */
-
-.intro-men {
-  background: url(../images/BackgroundPictureMen.jpg) center no-repeat;
-  background-size: cover;
-}
+/* Men - Women */
 
 .intro-men,
 .intro-women {
@@ -149,14 +147,16 @@ section {
 
 .intro-men p,
 .intro-women p {
-    font-size: 20px;
-    background-color: rgba(0, 0, 0, 0.35);
+  font-size: 20px;
+  background-color: rgba(0, 0, 0, 0.25);
+  padding: 5px;
 }
 
 .featured-products {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 25px;
+  top: 0px;
   row-gap: 0px;
   margin: 25px;
 }
@@ -170,6 +170,7 @@ section {
 .featured-products .product a {
   color: var(--color-main);
   text-decoration: none;
+  margin: 20px;
 }
 
 .product:hover {
@@ -189,13 +190,6 @@ section {
 .product p {
   font-size: 16px;
   margin: 25px;
-}
-
-/* women */
-
-.intro-women {
-  background: url(../images/BackgroundPictureWomen.jpg) center no-repeat;
-  background-size: cover;
 }
 
 /* About */
@@ -293,7 +287,8 @@ textarea {
 .flex-container {
   max-width: 1000px;
   height: auto;
-  display: flex;
+  display: grid;
+  grid-template-columns: 1 fr, 1fr;
   justify-content: center; /* center horizontally */
   align-items: center; /* center vertically */
   background-color: var(--color-shade);
@@ -398,6 +393,21 @@ textarea {
   margin: auto;
 }
 
+h4 {
+  font-size: 12px;
+  margin: auto 10px;
+  text-align: center;
+}
+
+.alternatives {
+  width: 200px;
+}
+
+.alternatives p {
+  font-size: 12px;
+  text-align: center;
+}
+
 /* Checkout success */
 
 .co-success h1 {
@@ -457,9 +467,15 @@ textarea {
   margin-left: 60px;
 }
 
+hr {
+  border: 1.5px solid var(--color-font);
+  width: 250px;
+  margin-left: 60px;
+}
+
 /* backgrounds */
 .background {
-  background: url("../images/BackgroundPictureMain.jpg") left no-repeat;
+  background: url("../images/background.jpg") left no-repeat;
   background-size: cover;
   min-height: 100vh;
   padding-top: 40px;
@@ -468,7 +484,7 @@ textarea {
 
 /* background for specificproduct*/
 .bg-product {
-  background-image: url(../images/BackgroundPictureSpecificProduct.jpg);
+  background-image: url(../images/backgroundsp.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position-x: top;
@@ -477,6 +493,18 @@ textarea {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+/* background men*/
+.intro-men {
+  background: url(../images/backgroundmen.jpg) center no-repeat;
+  background-size: cover;
+}
+
+/* background women */
+.intro-women {
+  background: url(../images/backgroundwomen.jpg) center no-repeat;
+  background-size: cover;
 }
 
 /* Buttons */
@@ -495,13 +523,13 @@ textarea {
 }
 
 .cta-buttons div a {
-    display: flex;
-    text-decoration: none;
-    justify-content: center;
-    font-size: 16px;
-    color: var(--color-main);
-    margin: 20px 10px;
-    padding: 10px;
+  display: flex;
+  text-decoration: none;
+  justify-content: center;
+  font-size: 16px;
+  color: var(--color-main);
+  margin: 20px 40px;
+  padding: 10px;
 }
 
 .cta:hover {
@@ -552,7 +580,7 @@ textarea {
   background-color: #d81d1d;
   color: var(--color-main);
   margin: 60px auto 40px;
-  padding: 15px 150px;
+  padding: 15px 100px;
   border-radius: 5px;
   cursor: pointer;
   white-space: nowrap;
@@ -579,21 +607,25 @@ textarea {
 .cta-sc2 {
   /*shopping cart*/
   margin: 12px auto;
+  text-decoration: none;
 }
 
 .cta-sc2 {
   background-color: #41be4d;
 }
 
-.cta-o button {
+.cta-o {
   /* place order*/
   margin: 40px auto;
+  padding: 15px 60px;
 }
 
 .cta-sp {
   /* specific product*/
   display: flex;
   justify-content: center;
+  text-decoration: none;
+  color: var(--color-main);
 }
 
 /* --------------- Footer--------------- */
