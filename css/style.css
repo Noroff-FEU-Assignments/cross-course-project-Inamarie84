@@ -137,12 +137,19 @@ section {
 .intro-women {
   height: auto;
   color: var(--color-main);
+  background-color: rgba(0, 0, 0, 0.25);
   line-height: 1.5;
   margin-left: 0px;
   max-width: 100%;
   font-size: 18px;
   text-align: left;
   padding: 10px 20px;
+}
+
+.intro-men h1,
+.intro-women h1 {
+    background-color: rgba(0, 0, 0, 0.25);
+    padding: 5px;
 }
 
 .intro-men p,
