@@ -584,6 +584,7 @@ hr {
   border-radius: 5px;
   cursor: pointer;
   white-space: nowrap;
+  text-decoration: none;
 }
 
 .cta-co_submit {
