@@ -230,6 +230,11 @@ section {
   text-decoration: underline;
 }
 
+.info:hover {
+    font-size: 20px;
+    cursor: pointer;
+}
+
 .information {
   display: inline-flex;
   gap: 10px;
@@ -288,6 +293,7 @@ textarea {
   display: flex;
   flex-direction: column;
 }
+
 
 /* Specific Product*/
 
@@ -510,7 +516,7 @@ hr {
 
 /* background women */
 .intro-women {
-  background: url(../images/backgroundwomen.jpg) center no-repeat;
+  background: url(../images/womenbg.jpg) center no-repeat;
   background-size: cover;
 }
 
@@ -619,7 +625,7 @@ hr {
 }
 
 .cta-sc2 {
-  background-color: #41be4d;
+  background-color: #1cab2a;
 }
 
 .cta-o {
