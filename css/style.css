@@ -27,7 +27,7 @@ body {
 }
 
 .hidden {
-    display: none;
+  display: none;
 }
 
 /* --------------- Header --------------- */
@@ -105,6 +105,7 @@ header .nav .links a:hover {
   text-decoration: underline;
 }
 
+/* makes cart larger when hover over */
 .cart:hover {
   font-size: larger;
 }
@@ -152,8 +153,8 @@ section {
 
 .intro-men h1,
 .intro-women h1 {
-    background-color: rgba(0, 0, 0, 0.25);
-    padding: 5px;
+  background-color: rgba(0, 0, 0, 0.25);
+  padding: 5px;
 }
 
 .intro-men p,
@@ -235,8 +236,8 @@ section {
 }
 
 .info:hover {
-    font-size: 20px;
-    cursor: pointer;
+  font-size: 20px;
+  cursor: pointer;
 }
 
 .information {
@@ -297,7 +298,6 @@ textarea {
   display: flex;
   flex-direction: column;
 }
-
 
 /* Specific Product*/
 
@@ -432,14 +432,14 @@ h4 {
   text-transform: uppercase;
 }
 
-.co-success p {
+.co-success h2 {
   font-size: 26px;
   font-weight: lighter;
   font-style: italic;
   margin-top: 0px;
 }
 
-.co-success h2 {
+.co-success h3 {
   font-size: 36px;
   text-transform: capitalize;
   margin: 10px auto 40px;
