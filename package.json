@@ -1,0 +1,19 @@
+{
+  "name": "cross-course-project-inamarie84.",
+  "version": "1.0.0",
+  "description": "cross-course-project-Inamarie84 created by GitHub Classroom",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Noroff-FEU-Assignments/cross-course-project-Inamarie84.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Noroff-FEU-Assignments/cross-course-project-Inamarie84/issues"
+  },
+  "homepage": "https://github.com/Noroff-FEU-Assignments/cross-course-project-Inamarie84#readme"
+}
