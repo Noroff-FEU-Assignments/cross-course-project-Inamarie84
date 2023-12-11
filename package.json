@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/Noroff-FEU-Assignments/cross-course-project-Inamarie84/issues"
   },
-  "homepage": "https://github.com/Noroff-FEU-Assignments/cross-course-project-Inamarie84#readme"
+  "homepage": "https://github.com/Noroff-FEU-Assignments/cross-course-project-Inamarie84#readme",
+  "devDependencies": {
+    "eslint": "^8.55.0"
+  }
 }
