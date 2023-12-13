@@ -30,6 +30,11 @@ body {
   display: none;
 }
 
+.on-sale {
+  color: green;
+  text-transform: uppercase;
+}
+
 /* --------------- Header --------------- */
 /* Header */
 
