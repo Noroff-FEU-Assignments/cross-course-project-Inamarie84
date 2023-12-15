@@ -4,18 +4,18 @@ async function fetchJackets() {
     try {
       const response = await fetch(url);
       const items = await response.json();
+      displayMaleJackets(items);
       displayFemaleJackets(items);
-      // displayMaleJackets(items);
     } catch (error) {
-      const jacketContainer = document.querySelector("#featured-productswomen, #featured-productsmen");
+      const jacketContainer = document.querySelector("#featured-productsmen");
       jacketContainer.innerHTML = `<div class="error">Ooops...There was an error fetching the jackets</div>`;
     }
   }
-  
+
   fetchJackets();
-  
-  function displayFemaleJackets(items) {
-    const jacketContainer = document.querySelector("#featured-productswomen");
+
+export function displayMaleJackets(items) {
+    const jacketContainer = document.querySelector("#featured-productsmen");
   
     jacketContainer.innerHTML = "";
   
@@ -24,7 +24,7 @@ async function fetchJackets() {
       const item = items[i];
   
       // Check if the item is a female jacket
-      if (item.gender === "Female") {
+      if (item.gender === "Male") {
         // Check if the product is on sale
         const isOnSale = item.onSale;
   
@@ -36,8 +36,8 @@ async function fetchJackets() {
                                        <img class="product-images" src="${item.image}" alt="Product Image">
                                        <h2>${item.title}</h2>
                                        <p>${item.description}</p>
-                                       <div class="products">Sizes: ${item.sizes.join(', ')}</div>
-                                       <div class="products">
+                                       <div>Sizes: ${item.sizes.join(', ')}</div>
+                                       <div>
                                           Price: 
                                           ${isOnSale
                                             ? `<span style="color: red; text-decoration: line-through;">$${item.price.toFixed(2)}</span>`
@@ -51,4 +51,3 @@ async function fetchJackets() {
       }
     }
   }
-  
