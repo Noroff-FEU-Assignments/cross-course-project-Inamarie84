@@ -46,11 +46,13 @@ function displayFemaleJackets(items) {
                                      ${isOnSale
                                         ? `<div class="on-sale" style="color: green;">On Sale: $${item.discountedPrice.toFixed(2)}</div>`
                                         : ''}
-                                     <button class="add-cta">Add to cart</button>
+                                     
                                  </div>`;
     }
   }
 }
+
+
 
 // function displayMaleJackets(items) {
 //   const jacketContainer = document.querySelector("#featured-productsmen");
@@ -89,6 +91,16 @@ function displayFemaleJackets(items) {
 //     }
 //   }
 // }
+
+const addButton = document.querySelector("#addtocart-button");
+
+addButton.addEventListener("click", handleClick);
+
+function handleClick() {
+  console.log("button clicked");
+}
+
+// console.dir(addButton);
 
 
 
