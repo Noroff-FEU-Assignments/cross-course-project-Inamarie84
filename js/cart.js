@@ -10,7 +10,9 @@ if(cart === null) {
 else {
 
     cart.forEach(function(cart) {
-        cartContainer.innerHTML += `<div class="product"><h3>${cart.title}</h3></div> `
+        cartContainer.innerHTML += `<div class="product"><h3>${cart.title}</h3></div> 
+                                    <button class="add-cta">Checkout</button>
+                                    </div>`;
     });
     
 }
