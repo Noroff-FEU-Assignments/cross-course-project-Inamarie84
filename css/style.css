@@ -386,7 +386,7 @@ textarea {
   text-transform: uppercase;
 }
 
-.cart-product {
+.cart-container {
   margin-left: 0px;
   display: flex;
   justify-content: center;
@@ -536,11 +536,12 @@ hr {
 
 /* Buttons */
 
-.cta {
+.cta, .add-cta {
   /* main buttons */
   border: none;
   padding: 10px 20px;
   border-radius: 5px;
+  color: var(--color-product);
   background-color: var(--color-theme);
   font-size: 14px;
   text-transform: uppercase;

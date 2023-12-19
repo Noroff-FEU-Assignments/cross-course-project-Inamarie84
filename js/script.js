@@ -30,6 +30,7 @@ function displayFemaleJackets(items) {
 
       // Check if the product has a discounted price
       const hasDiscountedPrice = item.discountedPrice !== undefined;
+      
 
       // Build the HTML string with conditional styles
       jacketContainer.innerHTML += `<div class="product">
@@ -46,11 +47,42 @@ function displayFemaleJackets(items) {
                                      ${isOnSale
                                         ? `<div class="on-sale" style="color: green;">On Sale: $${item.discountedPrice.toFixed(2)}</div>`
                                         : ''}
-                                     
+                                        <button class="add-cta" data-id="${item.id}" data-title="${item.title}" data-price="${item.price}">Add to cart</button>
                                  </div>`;
     }
   }
+
+  const addButtons = document.querySelectorAll(".add-cta"); 
+
+  addButtons.forEach(function(button) {
+    button.addEventListener("click", handleClick);
+  });
+  
+  
+  // const addButton = document.querySelector("#addtocart-button");
+  
+  // addButton.addEventListener("click", handleClick);
+  
+  function handleClick(event) {
+    // console.dir(event.target.dataset.id);
+    // console.dir(event.target.dataset.title);
+    // console.dir(event.target.dataset.price);
+
+    const jacket = { id: event.target.dataset.id, title: event.target.dataset.title, price: event.target.dataset.price };
+
+    const cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+    console.log(cart);
+
+    cart.push(jacket);
+
+    localStorage.setItem("cart", JSON.stringify(cart));
+  }
+
 }
+
+
+
 
 
 
@@ -92,15 +124,9 @@ function displayFemaleJackets(items) {
 //   }
 // }
 
-const addButton = document.querySelector("#addtocart-button");
 
-addButton.addEventListener("click", handleClick);
 
-function handleClick() {
-  console.log("button clicked");
-}
 
-// console.dir(addButton);
 
 
 
