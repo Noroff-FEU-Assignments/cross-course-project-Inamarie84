@@ -143,6 +143,30 @@ section {
 
 /* Men - Women */
 
+.error {
+  padding: 20px;
+  color: red;
+  border: 1px red solid:
+}
+
+.size-box {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  border: 1px solid #000;
+  margin-right: 5px;
+  cursor: pointer;
+}
+
+.size-box.selected {
+  background-color: green;
+}
+
+.size-box-inner {
+  text-align: center;
+  line-height: 30px;
+}
+
 .intro-men,
 .intro-women {
   height: auto;
@@ -549,8 +573,6 @@ hr {
   width: 180px;
   margin: 8px;
 }
-
-
 
 .cta-buttons div a {
   display: flex;

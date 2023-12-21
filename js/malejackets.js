@@ -8,7 +8,7 @@ async function fetchJackets() {
       displayMaleJackets(items);
     } catch (error) {
       const jacketContainer = document.querySelector("#featured-productsmen");
-      jacketContainer.innerHTML = `<div class="error">Ooops...There was an error fetching the jackets</div>`;
+      jacketContainer.innerHTML = '<div class="error">Ooops...There was an error fetching the jackets</div>';
     }
   }
 
@@ -30,14 +30,19 @@ async function fetchJackets() {
   
         // Check if the product has a discounted price
         const hasDiscountedPrice = item.discountedPrice !== undefined;
+
+        const sizeBoxes = item.sizes.map(size => `<div class="size-box" data-size="${size}">
+                                                  <div class="size-box-inner">${size}</div>
+                                                  </div>`).join('');
+
   
         // Build the HTML string with conditional styles
         jacketContainer.innerHTML += `<div class="product">
                                        <img class="product-images" src="${item.image}" alt="Product Image">
                                        <h2>${item.title}</h2>
                                        <p>${item.description}</p>
-                                       <div>Sizes: ${item.sizes.join(', ')}</div>
-                                       <div>
+                                       <div class="products">Sizes: ${sizeBoxes}</div>
+                                       <div class="products">
                                           Price: 
                                           ${isOnSale
                                             ? `<span style="color: red; text-decoration: line-through;">$${item.price.toFixed(2)}</span>`
@@ -46,8 +51,51 @@ async function fetchJackets() {
                                        ${isOnSale
                                           ? `<div class="on-sale" style="color: green;">On Sale: $${item.discountedPrice.toFixed(2)}</div>`
                                           : ''}
-                                       <button class="add-cta">Add to cart</button>
+                                          <button class="add-cta" data-id="${item.id}" data-title="${item.title}" data-price="${item.price}">Add to cart</button>
                                    </div>`;
       }
     }
+
+    const addButtons = document.querySelectorAll(".add-cta"); 
+
+    addButtons.forEach(function(button) {
+      button.addEventListener("click", handleClick);
+    });
+    
+    
+    // const addButton = document.querySelector("#addtocart-button");
+    
+    // addButton.addEventListener("click", handleClick);
+    
+    function handleClick(event) {
+      // console.dir(event.target.dataset.id);
+      // console.dir(event.target.dataset.title);
+      // console.dir(event.target.dataset.price);
+  
+      const jacket = { id: event.target.dataset.id, title: event.target.dataset.title, price: event.target.dataset.price };
+  
+      const cart = JSON.parse(localStorage.getItem("cart")) || [];
+  
+      console.log(cart);
+  
+      cart.push(jacket);
+  
+      localStorage.setItem("cart", JSON.stringify(cart));
+    }
   }
+
+  // denne koden funker ikke // plassert feil? 
+
+document.addEventListener('DOMContentLoaded', function () {
+    const sizeBoxes = document.querySelectorAll('.size-box');
+  
+    sizeBoxes.forEach(function (box) {
+      box.addEventListener('click', function () {
+        box.classList.toggle('selected');
+      });
+    });
+  });
+
+
+  
+  
