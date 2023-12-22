@@ -2,15 +2,16 @@ import { url } from "./constants.js";
 
 
 async function fetchJackets() {
-  try {
-    const response = await fetch(url);
-    const items = await response.json();
-    displayFemaleJackets(items);
-  } catch (error) {
-    const jacketContainer = document.querySelector("#featured-productswomen, #featured-productsmen");
-    jacketContainer.innerHTML = '<div class="error">Ooops...There was an error fetching the jackets</div>';
+    try {
+      const response = await fetch(url);
+      const items = await response.json();
+      displayFemaleJackets(items);
+    } catch (error) {
+      console.log(error);
+      const jacketContainer = document.querySelector("#featured-productswomen, #featured-productsmen");
+      jacketContainer.innerHTML = '<div class="error">Ooops...There was an error fetching the jackets</div>';
+    }
   }
-}
 
 fetchJackets();
 
@@ -53,8 +54,10 @@ function displayFemaleJackets(items) {
                                         ? `<div class="on-sale" style="color: green;">On Sale: $${item.discountedPrice.toFixed(2)}</div>`
                                         : ''}
                                         <button class="add-cta" data-id="${item.id}" data-title="${item.title}" data-price="${item.price}">Add to cart</button>
+                                      <a href="SpecificProduct.html?id=${item.id}">View details</a>
                                       </div>`;
 
+                                      
     }
   }
 
