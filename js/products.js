@@ -17,8 +17,12 @@ async function fetchJacket(id) {
         const item = await response.json();
         displayJacket(item);
         // create html for the single object 
+
+        // throw new Error("API call failed");
     } catch(error) {
         console.log(error);
+
+        // displayMessage("#product-container");
         const container = document.querySelector("#product-container");
         container.innerHTML = '<div class="error">Ooops...There was an error fetching the jacket</div>';
     } 

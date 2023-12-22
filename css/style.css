@@ -42,7 +42,7 @@ body {
 
 .message.error {
   color: red;
-  border-color: red ;
+  border-color: red; 
 }
 
 .message.warning {
