@@ -35,6 +35,26 @@ body {
   text-transform: uppercase;
 }
 
+.message {
+  padding: 20px;
+  border-color: 1px black solid;
+}
+
+.message.error {
+  color: red;
+  border-color: red ;
+}
+
+.message.warning {
+  color: orange;
+  border-color: orange ;
+}
+
+.message.success {
+  color: green;
+  border-color: green ;
+}
+
 /* --------------- Header --------------- */
 /* Header */
 
@@ -143,12 +163,6 @@ section {
 
 /* Men - Women */
 
-.error {
-  padding: 20px;
-  color: red;
-  border: 1px red solid;
-}
-
 .size-box {
   display: inline-block;
   width: 30px;
@@ -207,12 +221,6 @@ section {
   background-color: var(--color-product);
   border-radius: 5px;
   min-height: 80%;
-}
-
-.featured-products .product a {
-  color: var(--color-main);
-  text-decoration: none;
-  margin: 20px;
 }
 
 .product:hover {
@@ -561,6 +569,10 @@ hr {
 }
 
 /* Buttons */
+
+#featured-productswomen a {
+  color: black;
+}
 
 .cta, .add-cta {
   /* main buttons */

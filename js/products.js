@@ -1,4 +1,5 @@
 import { url } from "./constants.js";
+import { displayMessage } from "./ui/shared/displayMessage.js";
 
 const queryString = document.location.search;
 const params = new URLSearchParams(queryString);
@@ -15,13 +16,16 @@ async function fetchJacket(id) {
         const response = await fetch(productUrl);
         const item = await response.json();
         console.log(item)
-        displayJacket(item);
+        return displayJacket(item);
         // create html for the single object 
-    }
-    catch(error) {
+
+        throw new Error("API call failed");
+    } catch(error) {
         console.log(error);
-        const container = document.querySelector("#product-container");
-        container.innerHTML = '<div class="error">Ooops...There was an error fetching the jacket</div>';
+
+        displayMessage("#product-container", error.message, "error")
+        // const container = document.querySelector("#product-container");
+        // container.innerHTML = '<div class="error">Ooops...There was an error fetching the jacket</div>';
     } 
 }
 

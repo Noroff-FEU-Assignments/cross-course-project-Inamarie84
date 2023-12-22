@@ -1,4 +1,5 @@
 import { url } from "./constants.js";
+import { displayMessage } from "./ui/shared/displayMessage.js";
 
 
 async function fetchJackets() {
@@ -7,8 +8,11 @@ async function fetchJackets() {
       const items = await response.json();
       displayMaleJackets(items);
     } catch (error) {
-      const jacketContainer = document.querySelector("#featured-productsmen");
-      jacketContainer.innerHTML = '<div class="error">Ooops...There was an error fetching the jackets</div>';
+      console.log(error);
+      displayMessage("#featured-productsmen", "Ooops...There was an error fetching the jackets", "error");
+
+      // const jacketContainer = document.querySelector("#featured-productsmen");
+      // jacketContainer.innerHTML = '<div class="error">Ooops...There was an error fetching the jackets</div>';
     }
   }
 
@@ -52,7 +56,8 @@ async function fetchJackets() {
                                           ? `<div class="on-sale" style="color: green;">On Sale: $${item.discountedPrice.toFixed(2)}</div>`
                                           : ''}
                                           <button class="add-cta" data-id="${item.id}" data-title="${item.title}" data-price="${item.price}">Add to cart</button>
-                                   </div>`;
+                                          <a href="SpecificProduct.html?id=${item.id}">View details</a>
+                                          </div>`;
       }
     }
 

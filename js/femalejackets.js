@@ -1,4 +1,5 @@
 import { url } from "./constants.js";
+import { displayMessage } from "./ui/shared/displayMessage.js";
 
 
 async function fetchJackets() {
@@ -8,8 +9,11 @@ async function fetchJackets() {
       displayFemaleJackets(items);
     } catch (error) {
       console.log(error);
-      const jacketContainer = document.querySelector("#featured-productswomen, #featured-productsmen");
-      jacketContainer.innerHTML = '<div class="error">Ooops...There was an error fetching the jackets</div>';
+      displayMessage("#featured-productswomen", "Ooops...There was an error fetching the jackets", "error");
+
+
+      // const jacketContainer = document.querySelector("#featured-productswomen");
+      // jacketContainer.innerHTML = '<div class="error">Ooops...There was an error fetching the jackets</div>';
     }
   }
 
