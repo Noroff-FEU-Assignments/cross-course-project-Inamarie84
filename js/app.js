@@ -12,6 +12,7 @@ function router() {
         console.log("product page");
         break;
     }
+}
 
 //     if(path === "/" || "/index.html") {
 //         console.log("home page")
