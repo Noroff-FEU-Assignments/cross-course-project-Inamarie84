@@ -29,7 +29,7 @@
   var menLinkDiv = document.createElement('div');
   var menLink = document.createElement('a');
   menLink.href = '/pages/malejackets.html';
-  menLink.classList.add('cta', 'cta-sm');
+  menLink.classList.add('cta');
   menLink.textContent = "Shop Men's";
   menLinkDiv.appendChild(menLink);
   ctaButtonsDiv.appendChild(menLinkDiv);
@@ -38,7 +38,7 @@
   var womenLinkDiv = document.createElement('div');
   var womenLink = document.createElement('a');
   womenLink.href = '/pages/femalejackets.html';
-  womenLink.classList.add('cta', 'cta-sw');
+  womenLink.classList.add('cta');
   womenLink.textContent = "Shop Women's";
   womenLinkDiv.appendChild(womenLink);
   ctaButtonsDiv.appendChild(womenLinkDiv);

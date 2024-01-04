@@ -131,9 +131,9 @@ header .nav .links a:hover {
 }
 
 /* makes cart larger when hover over */
-.cart:hover {
+/* .cart:hover {
   font-size: larger;
-}
+} */
 
 /* --------------- Main--------------- */
 section {
@@ -223,10 +223,10 @@ section {
   min-height: 80%;
 }
 
-.product:hover {
+/* .product:hover {
   border: 2px solid black;
   box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
-}
+} */
 
 .product img {
   box-sizing: border-box;
@@ -585,9 +585,10 @@ hr {
 
 /* Buttons */
 
-#featured-productswomen a {
-  color: black;
-}
+/* .view {
+  color: var(--color-footer);
+  justify-content: center;
+} */
 
 .cta, .add-cta {
   /* main buttons */

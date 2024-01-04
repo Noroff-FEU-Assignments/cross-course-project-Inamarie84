@@ -59,10 +59,41 @@ function displayJacket(jacket) {
     const description = document.createElement("p");
     description.textContent = jacket.description;
 
-    const price = document.createElement("p");
-    description.textContent = jacket.price;
+    const price = document.createElement("h2");
+    price.textContent = `$ ${jacket.price}`;
+
+    const anchor = document.createElement("a");
+    anchor.href = "/path/to/your/link"; // Replace with the actual link
+
 
     container.append(heading);
     container.appendChild(image);
     container.append(description);
+    container.append(price);
+
+    // Add "Add to Cart" button
+    const addToCartButton = document.createElement("button");
+    addToCartButton.textContent = "Add to Cart";
+    addToCartButton.classList.add("add-cta");
+    addToCartButton.addEventListener("click", addToCartHandler);
+    
+    // Add "Continue Shopping" button
+    const continueShoppingButton = document.createElement("button");
+    continueShoppingButton.textContent = "Continue Shopping";
+    continueShoppingButton.classList.add("add-cta");
+    continueShoppingButton.addEventListener("click", continueShoppingHandler);
+    
+    // Append buttons to the container
+    container.appendChild(addToCartButton);
+    container.appendChild(continueShoppingButton);
+}
+
+function addToCartHandler() {
+    // Add your logic for adding the item to the cart
+    console.log("Added to Cart");
+}
+
+function continueShoppingHandler() {
+    // Add your logic for continuing shopping
+    console.log("Continue Shopping");
 }
