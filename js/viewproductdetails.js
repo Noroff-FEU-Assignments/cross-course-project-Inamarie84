@@ -59,6 +59,9 @@ function displayJacket(jacket) {
     const description = document.createElement("p");
     description.textContent = jacket.description;
 
+    const price = document.createElement("p");
+    description.textContent = jacket.price;
+
     container.append(heading);
     container.appendChild(image);
     container.append(description);
