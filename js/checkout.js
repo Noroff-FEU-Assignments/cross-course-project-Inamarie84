@@ -11,8 +11,9 @@ else {
 
     cart.forEach(function(cart) {
         cartContainer.innerHTML += `<div class="product"><h3>${cart.title}</h3></div> 
+                                    <div class="price"><p>Price: ${cart.price}</p></div> 
                                     <button class="add-cta">Checkout</button>
-                                    </div>`;
+                                    <button class="cta">Continue Shopping</button>`;
     });
     
 }

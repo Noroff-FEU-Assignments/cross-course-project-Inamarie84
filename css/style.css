@@ -210,7 +210,7 @@ section {
 .featured-products {
   position: relative;
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 25px;
   top: 0px;
   row-gap: 20px;
@@ -344,23 +344,34 @@ textarea {
 
 /* Specific Product*/
 
-.flex-container {
+/* .flex-container {
   max-width: 1000px;
   height: auto;
   display: grid;
   grid-template-columns: 1 fr, 1fr;
-  justify-content: center; /* center horizontally */
-  align-items: center; /* center vertically */
+  justify-content: center; 
+  align-items: center; 
   background-color: var(--color-shade);
   color: var(--color-font);
-  margin: 100px; /* add margin */
+  margin: 100px; 
 }
 
 .flex-child {
   flex: 1;
-  align-self: stretch; /* make elements the same height */
+  align-self: stretch; 
   padding: 20px;
+} */
+
+.detail-image {
+  display: flex;
+  box-sizing: border-box;
+  padding: 10px;
+  width: 50%;
+  height: 100%;
+  object-fit: cover;
+  margin: 60px 40px;
 }
+
 
 .product-images {
   box-sizing: border-box;
@@ -420,12 +431,16 @@ textarea {
   text-transform: uppercase;
 }
 
-.cart-container {
-  margin-left: 0px;
+.cart-container, #product-container {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  background-color: var(--color-background);
+  color: var(--color-font);
+  padding: 20px;
+  margin: 10px 80px;
+  font-size: 18px;
 }
 .flex-container {
   display: flex;
@@ -543,7 +558,7 @@ hr {
   padding-bottom: 20px;
 }
 
-/* background for specificproduct*/
+/* background for specificproduct
 .bg-product {
   background-image: url(../images/backgroundsp.jpg);
   background-size: cover;
@@ -554,7 +569,7 @@ hr {
   display: flex;
   justify-content: center;
   align-items: center;
-}
+} */
 
 /* background men*/
 .intro-men {
@@ -698,13 +713,20 @@ hr {
 /* --------------- Footer--------------- */
 
 /* Footer */
+
 footer {
   display: flex;
   justify-content: space-between;
+
 }
 
 footer p {
+  bottom: 0px;
   color: var(--color-footer);
   margin: 10px;
   letter-spacing: 1px;
+}
+
+footer i {
+  padding: 5px;
 }

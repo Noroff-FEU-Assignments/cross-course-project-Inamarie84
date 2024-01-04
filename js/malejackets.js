@@ -56,7 +56,7 @@ async function fetchJackets() {
                                           ? `<div class="on-sale" style="color: green;">On Sale: $${item.discountedPrice.toFixed(2)}</div>`
                                           : ''}
                                           <button class="add-cta" data-id="${item.id}" data-title="${item.title}" data-price="${item.price}">Add to cart</button>
-                                          <a href="SpecificProduct.html?id=${item.id}">View details</a>
+                                          <a href="SpecificProduct.html?id=${item.id}" class="view">View details</a>
                                           </div>`;
       }
     }

@@ -51,14 +51,15 @@ function displayJacket(jacket) {
     const heading = document.createElement("h1");
     heading.textContent = jacket.title;
 
-    const description = document.createElement("p");
-    description.textContent = jacket.description;
-
     const image = document.createElement("img");
     image.src = jacket.image; // Replace 'imageUrl' with the property that holds the image URL in your jacket object
     image.alt = jacket.title; // Set the alt attribute for accessibility
+    image.classList.add("detail-image");
+
+    const description = document.createElement("p");
+    description.textContent = jacket.description;
 
     container.append(heading);
-    container.append(description);
     container.appendChild(image);
+    container.append(description);
 }
