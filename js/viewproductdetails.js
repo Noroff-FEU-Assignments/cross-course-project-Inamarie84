@@ -62,30 +62,28 @@ function displayJacket(jacket) {
     const price = document.createElement("h2");
     price.textContent = `$ ${jacket.price}`;
 
-    const anchor = document.createElement("a");
-    anchor.href = "/path/to/your/link"; // Replace with the actual link
-
-
     container.append(heading);
     container.appendChild(image);
     container.append(description);
     container.append(price);
 
-    // Add "Add to Cart" button
-    const addToCartButton = document.createElement("button");
-    addToCartButton.textContent = "Add to Cart";
-    addToCartButton.classList.add("add-cta");
-    addToCartButton.addEventListener("click", addToCartHandler);
+// Add "Add to Cart" link
+    const addToCartLink = document.createElement("a");
+    addToCartLink.textContent = "Add to Cart";
+    addToCartLink.href = "/Pages/checkout.html"; // Set the appropriate URL
+    addToCartLink.classList.add("add-cta");
+
+// Add "Continue Shopping" link
+    const continueShoppingLink = document.createElement("a");
+    continueShoppingLink.textContent = "Continue Shopping";
+    continueShoppingLink.href = "/"; // Set the appropriate URL
+    continueShoppingLink.classList.add("add-cta");
+
+// Append links to the container
+    container.appendChild(addToCartLink);
+    container.appendChild(continueShoppingLink);
+
     
-    // Add "Continue Shopping" button
-    const continueShoppingButton = document.createElement("button");
-    continueShoppingButton.textContent = "Continue Shopping";
-    continueShoppingButton.classList.add("add-cta");
-    continueShoppingButton.addEventListener("click", continueShoppingHandler);
-    
-    // Append buttons to the container
-    container.appendChild(addToCartButton);
-    container.appendChild(continueShoppingButton);
 }
 
 function addToCartHandler() {

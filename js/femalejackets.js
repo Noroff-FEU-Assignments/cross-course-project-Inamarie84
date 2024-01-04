@@ -46,7 +46,7 @@ function displayFemaleJackets(items) {
       jacketContainer.innerHTML += `<div class="product">
                                      <img class="product-images" src="${item.image}" alt="Product Image">
                                      <h2>${item.title}</h2>
-                                     <div class="products">Sizes: ${sizeBoxes}</div>
+                                     <div class="products">Size: ${sizeBoxes}</div>
                                      <div class="products">
                                         Price: 
                                         ${isOnSale
@@ -94,17 +94,16 @@ function displayFemaleJackets(items) {
 
 // denne koden funker ikke // plassert feil? 
 
-document.addEventListener('DOMContentLoaded', function () {
-  const sizeBoxes = document.querySelectorAll('.size-box');
+// document.addEventListener('DOMContentLoaded', function () {
+//   const sizeBoxes = document.querySelectorAll('.size-box');
+//   console.log('Number of size boxes:', sizeBoxes.length);
 
-  sizeBoxes.forEach(function (box) {
-    box.addEventListener('click', function () {
-      box.classList.toggle('selected');
-    });
-  });
-});
-
-
-
+//   sizeBoxes.forEach(function (box) {
+//     box.addEventListener('click', function () {
+//       console.log('Size box clicked');
+//       box.classList.toggle('selected');
+//     });
+//   });
+// });
 
   

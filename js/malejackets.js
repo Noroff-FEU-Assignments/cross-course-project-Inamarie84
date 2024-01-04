@@ -45,7 +45,7 @@ async function fetchJackets() {
                                        <img class="product-images" src="${item.image}" alt="Product Image">
                                        <h2>${item.title}</h2>
                                        <p>${item.description}</p>
-                                       <div class="products">Sizes: ${sizeBoxes}</div>
+                                       <div class="products">Size: ${sizeBoxes}</div>
                                        <div class="products">
                                           Price: 
                                           ${isOnSale

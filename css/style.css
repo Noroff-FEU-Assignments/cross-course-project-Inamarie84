@@ -174,7 +174,9 @@ section {
 
 .size-box.selected {
   background-color: green;
+  /* Other styles for selected state */
 }
+
 
 .size-box-inner {
   text-align: center;
