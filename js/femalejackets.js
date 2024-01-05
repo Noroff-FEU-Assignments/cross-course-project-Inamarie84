@@ -20,49 +20,88 @@ async function fetchJackets() {
 fetchJackets();
 
 
+// ... (your existing code)
+
 function displayFemaleJackets(items) {
   const jacketContainer = document.querySelector("#featured-productswomen");
 
   jacketContainer.innerHTML = "";
 
-  // Use a for loop to iterate through the items
   for (let i = 0; i < items.length; i++) {
     const item = items[i];
 
-    // Check if the item is a female jacket
     if (item.gender === "Female") {
-      // Check if the product is on sale
       const isOnSale = item.onSale;
-
-      // Check if the product has a discounted price
       const hasDiscountedPrice = item.discountedPrice !== undefined;
 
+      // Declare sizeBoxes outside the loop
       const sizeBoxes = item.sizes.map(size => `<div class="size-box" data-size="${size}">
                                                 <div class="size-box-inner">${size}</div>
                                                 </div>`).join('');
-      
 
-      // Build the HTML string with conditional styles
-      jacketContainer.innerHTML += `<div class="product">
-                                     <img class="product-images" src="${item.image}" alt="Product Image">
-                                     <h2>${item.title}</h2>
-                                     <div class="products">Size: ${sizeBoxes}</div>
-                                     <div class="products">
-                                        Price: 
-                                        ${isOnSale
-                                          ? `<span style="color: red; text-decoration: line-through;">$${item.price.toFixed(2)}</span>`
-                                          : `$${item.price.toFixed(2)}`}
-                                     </div>
-                                     ${isOnSale
-                                        ? `<div class="on-sale" style="color: green;">On Sale: $${item.discountedPrice.toFixed(2)}</div>`
-                                        : ''}
-                                        <button class="add-cta" data-id="${item.id}" data-title="${item.title}" data-price="${item.price}">Add to cart</button>
-                                      <a href="SpecificProduct.html?id=${item.id}" class="view">View details</a>
-                                      </div>`;
+      const productElement = document.createElement('div');
+      productElement.classList.add('product');
 
-                                      
+      // Create and append product image
+      const productImage = document.createElement('img');
+      productImage.classList.add('product-images');
+      productImage.src = item.image;
+      productImage.alt = 'Product Image';
+      productElement.appendChild(productImage);
+
+      // Create and append product title
+      const productTitle = document.createElement('h2');
+      productTitle.textContent = item.title;
+      productElement.appendChild(productTitle);
+
+      // Create and append product sizes
+      const productSizes = document.createElement('div');
+      productSizes.classList.add('products');
+      productSizes.textContent = `Size: ${sizeBoxes}`;
+      productElement.appendChild(productSizes);
+
+      // Create and append product price
+      const productPrice = document.createElement('div');
+      productPrice.classList.add('products');
+      productPrice.innerHTML = `Price: ${isOnSale
+        ? `<span style="color: red; text-decoration: line-through;">$${item.price.toFixed(2)}</span>`
+        : `$${item.price.toFixed(2)}`}`;
+      productElement.appendChild(productPrice);
+
+      // Create and append on-sale information
+      if (isOnSale) {
+        const onSaleElement = document.createElement('div');
+        onSaleElement.classList.add('on-sale');
+        onSaleElement.style.color = 'green';
+        onSaleElement.textContent = `On Sale: $${item.discountedPrice.toFixed(2)}`;
+        productElement.appendChild(onSaleElement);
+      }
+
+      // Create and append "Add to cart" button
+      const addToCartButton = document.createElement('button');
+      addToCartButton.classList.add('add-cta');
+      addToCartButton.dataset.id = item.id;
+      addToCartButton.dataset.title = item.title;
+      addToCartButton.dataset.price = item.price;
+      addToCartButton.textContent = 'Add to cart';
+      addToCartButton.addEventListener('click', handleClick);
+      productElement.appendChild(addToCartButton);
+
+      // Create and append "View details" link
+      const viewDetailsLink = document.createElement('a');
+      viewDetailsLink.href = `SpecificProduct.html?id=${item.id}`;
+      viewDetailsLink.classList.add('view');
+      viewDetailsLink.textContent = 'View details';
+      productElement.appendChild(viewDetailsLink);
+
+      // Append the productElement to jacketContainer
+      jacketContainer.appendChild(productElement);
     }
   }
+
+  // ... (your existing code)
+
+
 
   const addButtons = document.querySelectorAll(".add-cta"); 
 
