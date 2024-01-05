@@ -1,148 +1,141 @@
 import { url } from "./constants.js";
 import { displayMessage } from "./ui/shared/displayMessage.js";
 
+function handleClick(event) {
+  const jacket = {
+      id: event.target.dataset.id,
+      title: event.target.dataset.title,
+      price: event.target.dataset.price,
+      size: event.target.closest('.product').dataset.selectedSize
+  };
+
+  const cart = JSON.parse(localStorage.getItem("cart")) || [];
+  cart.push(jacket);
+  localStorage.setItem("cart", JSON.stringify(cart));
+}
 
 async function fetchJackets() {
     try {
-      const response = await fetch(url);
-      const items = await response.json();
-      displayFemaleJackets(items);
+        const response = await fetch(url);
+        const items = await response.json();
+        displayFemaleJackets(items);
     } catch (error) {
-      console.log(error);
-      displayMessage("#featured-productswomen", "Ooops...There was an error fetching the jackets", "error");
-
-
-      // const jacketContainer = document.querySelector("#featured-productswomen");
-      // jacketContainer.innerHTML = '<div class="error">Ooops...There was an error fetching the jackets</div>';
+        console.log(error);
+        displayMessage("#featured-productswomen", "Ooops...There was an error fetching the jackets", "error");
     }
-  }
-
-fetchJackets();
-
-
-// ... (your existing code)
-
-function displayFemaleJackets(items) {
-  const jacketContainer = document.querySelector("#featured-productswomen");
-
-  jacketContainer.innerHTML = "";
-
-  for (let i = 0; i < items.length; i++) {
-    const item = items[i];
-
-    if (item.gender === "Female") {
-      const isOnSale = item.onSale;
-      const hasDiscountedPrice = item.discountedPrice !== undefined;
-
-      // Declare sizeBoxes outside the loop
-      const sizeBoxes = item.sizes.map(size => `<div class="size-box" data-size="${size}">
-                                                <div class="size-box-inner">${size}</div>
-                                                </div>`).join('');
-
-      const productElement = document.createElement('div');
-      productElement.classList.add('product');
-
-      // Create and append product image
-      const productImage = document.createElement('img');
-      productImage.classList.add('product-images');
-      productImage.src = item.image;
-      productImage.alt = 'Product Image';
-      productElement.appendChild(productImage);
-
-      // Create and append product title
-      const productTitle = document.createElement('h2');
-      productTitle.textContent = item.title;
-      productElement.appendChild(productTitle);
-
-      // Create and append product sizes
-      const productSizes = document.createElement('div');
-      productSizes.classList.add('products');
-      productSizes.textContent = `Size: ${sizeBoxes}`;
-      productElement.appendChild(productSizes);
-
-      // Create and append product price
-      const productPrice = document.createElement('div');
-      productPrice.classList.add('products');
-      productPrice.innerHTML = `Price: ${isOnSale
-        ? `<span style="color: red; text-decoration: line-through;">$${item.price.toFixed(2)}</span>`
-        : `$${item.price.toFixed(2)}`}`;
-      productElement.appendChild(productPrice);
-
-      // Create and append on-sale information
-      if (isOnSale) {
-        const onSaleElement = document.createElement('div');
-        onSaleElement.classList.add('on-sale');
-        onSaleElement.style.color = 'green';
-        onSaleElement.textContent = `On Sale: $${item.discountedPrice.toFixed(2)}`;
-        productElement.appendChild(onSaleElement);
-      }
-
-      // Create and append "Add to cart" button
-      const addToCartButton = document.createElement('button');
-      addToCartButton.classList.add('add-cta');
-      addToCartButton.dataset.id = item.id;
-      addToCartButton.dataset.title = item.title;
-      addToCartButton.dataset.price = item.price;
-      addToCartButton.textContent = 'Add to cart';
-      addToCartButton.addEventListener('click', handleClick);
-      productElement.appendChild(addToCartButton);
-
-      // Create and append "View details" link
-      const viewDetailsLink = document.createElement('a');
-      viewDetailsLink.href = `SpecificProduct.html?id=${item.id}`;
-      viewDetailsLink.classList.add('view');
-      viewDetailsLink.textContent = 'View details';
-      productElement.appendChild(viewDetailsLink);
-
-      // Append the productElement to jacketContainer
-      jacketContainer.appendChild(productElement);
-    }
-  }
-
-  // ... (your existing code)
-
-
-
-  const addButtons = document.querySelectorAll(".add-cta"); 
-
-  addButtons.forEach(function(button) {
-    button.addEventListener("click", handleClick);
-  });
-  
-  
-  // const addButton = document.querySelector("#addtocart-button");
-  
-  // addButton.addEventListener("click", handleClick);
-  
-  function handleClick(event) {
-    // console.dir(event.target.dataset.id);
-    // console.dir(event.target.dataset.title);
-    // console.dir(event.target.dataset.price);
-
-    const jacket = { id: event.target.dataset.id, title: event.target.dataset.title, price: event.target.dataset.price };
-
-    const cart = JSON.parse(localStorage.getItem("cart")) || [];
-
-    console.log(cart);
-
-    cart.push(jacket);
-
-    localStorage.setItem("cart", JSON.stringify(cart));
-  }
 }
 
-// denne koden funker ikke // plassert feil? 
+function displayFemaleJackets(items) {
+    const jacketContainer = document.querySelector("#featured-productswomen");
 
-// document.addEventListener('DOMContentLoaded', function () {
-//   const sizeBoxes = document.querySelectorAll('.size-box');
-//   console.log('Number of size boxes:', sizeBoxes.length);
+    jacketContainer.innerHTML = "";
 
-//   sizeBoxes.forEach(function (box) {
-//     box.addEventListener('click', function () {
-//       console.log('Size box clicked');
-//       box.classList.toggle('selected');
-//     });
-//   });
-// });
+    // Use a for loop to iterate through the items
+    for (let i = 0; i < items.length; i++) {
+        const item = items[i];
 
-  
+        // Check if the item is a female jacket
+        if (item.gender === "Female") {
+            // Check if the product is on sale
+            const isOnSale = item.onSale;
+
+            // Check if the product has a discounted price
+            const hasDiscountedPrice = item.discountedPrice !== undefined;
+
+            const productContainer = document.createElement('div');
+            productContainer.classList.add('product');
+
+            const imageElement = document.createElement('img');
+            imageElement.classList.add('product-images');
+            imageElement.src = item.image;
+            imageElement.alt = 'Product Image';
+
+            const titleElement = document.createElement('h2');
+            titleElement.textContent = item.title;
+
+            const descriptionElement = document.createElement('p');
+            descriptionElement.textContent = item.description;
+
+            const sizeContainer = document.createElement('div');
+            sizeContainer.classList.add('products');
+            sizeContainer.textContent = 'Size: ';
+
+            const sizeDropdown = document.createElement('select');
+            sizeDropdown.classList.add('size-dropdown');
+
+            const sizeOptions = item.sizes.map(size => {
+                const option = document.createElement('option');
+                option.value = size;
+                option.textContent = size;
+                return option;
+            });
+
+            sizeOptions.forEach(option => sizeDropdown.appendChild(option));
+
+            sizeContainer.appendChild(sizeDropdown);
+
+            // Create the Price element
+            const priceContainer = document.createElement('div');
+            priceContainer.classList.add('products');
+            priceContainer.textContent = 'Price: ';
+
+            const priceValue = isOnSale ? `$${item.discountedPrice.toFixed(2)}` : `$${item.price.toFixed(2)}`;
+
+            const priceElement = document.createElement('span');
+            priceElement.style.color = isOnSale ? 'red' : 'inherit';
+            priceElement.style.textDecoration = isOnSale ? 'line-through' : 'none';
+            priceElement.textContent = priceValue;
+
+            priceContainer.appendChild(priceElement);
+
+            // Create the On Sale element if applicable
+            const onSaleElement = document.createElement('div');
+            onSaleElement.classList.add('on-sale');
+            onSaleElement.style.color = 'green';
+            onSaleElement.textContent = isOnSale ? `On Sale: $${item.discountedPrice.toFixed(2)}` : '';
+
+            // Create the Add to Cart button
+            const addToCartButton = document.createElement('button');
+            addToCartButton.classList.add('add-cta');
+            addToCartButton.dataset.id = item.id;
+            addToCartButton.dataset.title = item.title;
+            addToCartButton.dataset.price = item.price;
+            addToCartButton.textContent = 'Add to cart';
+
+            // Create the View Details link
+            const viewDetailsLink = document.createElement('a');
+            viewDetailsLink.href = `SpecificProduct.html?id=${item.id}`;
+            viewDetailsLink.classList.add('view');
+            viewDetailsLink.textContent = 'View details';
+
+            // Append all elements to the product container
+            productContainer.appendChild(imageElement);
+            productContainer.appendChild(titleElement);
+            productContainer.appendChild(descriptionElement);
+            productContainer.appendChild(sizeContainer);
+            productContainer.appendChild(priceContainer);
+            productContainer.appendChild(onSaleElement);
+            productContainer.appendChild(addToCartButton);
+            productContainer.appendChild(viewDetailsLink);
+
+            jacketContainer.appendChild(productContainer);
+
+            // Update the event listener for the size dropdown
+            sizeDropdown.addEventListener('change', function () {
+                const selectedSize = this.value;
+                productContainer.dataset.selectedSize = selectedSize;
+                // Optionally, you can update the displayed size or perform other actions here
+            });
+        }
+    }
+
+    const addButtons = document.querySelectorAll(".add-cta");
+
+    addButtons.forEach(function (button) {
+        button.addEventListener("click", handleClick);
+    });
+}
+
+document.addEventListener('DOMContentLoaded', function () {
+    fetchJackets();
+});
