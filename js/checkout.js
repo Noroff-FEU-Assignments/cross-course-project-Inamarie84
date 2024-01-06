@@ -6,6 +6,16 @@ const cartContainer = document.querySelector("#cart-container");
 
 if(cart === null) {
     cartContainer.innerText = "You have no jackets in your cart"; 
+
+    const goShoppingButton = document.createElement('button');
+    goShoppingButton.textContent = 'Go Shopping';
+    goShoppingButton.classList.add('cta');
+    goShoppingButton.addEventListener('click', function () {
+        // Navigate to another page (update the href accordingly)
+        window.location.href = '/index.html';
+    });
+    
+    cartContainer.appendChild(goShoppingButton);
 }
 else {
 
