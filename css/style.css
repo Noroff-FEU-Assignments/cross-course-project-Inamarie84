@@ -713,6 +713,10 @@ hr {
   color: var(--color-main);
 }
 
+#product-container p {
+  margin: 20px 40px;
+}
+
 /* --------------- Footer--------------- */
 
 /* Footer */

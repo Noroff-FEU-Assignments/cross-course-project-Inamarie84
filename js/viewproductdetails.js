@@ -41,30 +41,38 @@ async function fetchJacket(id) {
 fetchJacket(id);
 
 function displayJacket(jacket) {
-  document.title = `${jacket.title} | ${document.title}`;
+
+  const { title: jacketTitle, price: jacketPrice, image: jacketImage, description: jacketDescription, baseColor: jacketColor } = jacket;
+
+  document.title = `${jacketTitle} | ${document.title}`;
 
   const container = document.querySelector("#product-container");
 
   container.innerHTML = "";
 
   const heading = document.createElement("h1");
-  heading.textContent = jacket.title;
+  heading.textContent = jacketTitle;
 
   const image = document.createElement("img");
-  image.src = jacket.image; // Replace 'imageUrl' with the property that holds the image URL in your jacket object
-  image.alt = jacket.title; // Set the alt attribute for accessibility
+  image.src = jacketImage; // Replace 'imageUrl' with the property that holds the image URL in your jacket object
+  image.alt = jacketTitle; // Set the alt attribute for accessibility
   image.classList.add("detail-image");
 
+  const baseColor = document.createElement("p");
+  baseColor.textContent = `Color: ${jacketColor}`;
+
   const description = document.createElement("p");
-  description.textContent = jacket.description;
+  description.textContent = jacketDescription;
 
   const price = document.createElement("h2");
-  price.textContent = `$ ${jacket.price}`;
+  price.textContent = `$ ${jacketPrice}`;
 
   container.append(heading);
   container.appendChild(image);
   container.append(description);
+  container.append(baseColor);
   container.append(price);
+  
 
   // Add "Add to Cart" link
   const addToCartLink = document.createElement("a");

@@ -21,7 +21,7 @@ async function fetchJackets() {
         displayFemaleJackets(items);
     } catch (error) {
         console.log(error);
-        displayMessage("#featured-productswomen", "Ooops...There was an error fetching the jackets", "error");
+        displayMessage("error", "Ooops...There was an error fetching the jackets", "error");
     }
 }
 
@@ -69,6 +69,8 @@ function displayFemaleJackets(items) {
                 option.textContent = size;
                 return option;
             });
+
+            
 
             sizeOptions.forEach(option => sizeDropdown.appendChild(option));
 
