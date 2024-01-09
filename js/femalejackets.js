@@ -21,7 +21,7 @@ async function fetchJackets() {
         displayFemaleJackets(items);
     } catch (error) {
         console.log(error);
-        displayMessage("error", "Ooops...There was an error fetching the jackets", "error");
+        displayMessage("#message", "Ooops...There was an error fetching the jackets", "error");
     }
 }
 
