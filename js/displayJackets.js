@@ -1,50 +1,49 @@
 import { url } from "./constants.js";
 import { displayMessage } from "./ui/shared/displayMessage.js";
 
-
 function handleClick(event) {
-  const jacket = {
-      id: event.target.dataset.id,
-      title: event.target.dataset.title,
-      price: event.target.dataset.price,
-      size: event.target.closest('.product').dataset.selectedSize
-  };
+    const jacket = {
+        id: event.target.dataset.id,
+        title: event.target.dataset.title,
+        price: event.target.dataset.price,
+        size: event.target.closest('.product').dataset.selectedSize
+    };
 
-  const cart = JSON.parse(localStorage.getItem("cart")) || [];
-  cart.push(jacket);
-  localStorage.setItem("cart", JSON.stringify(cart));
+    const cart = JSON.parse(localStorage.getItem("cart")) || [];
+    cart.push(jacket);
+    localStorage.setItem("cart", JSON.stringify(cart));
 }
 
-async function fetchJackets() {
+async function fetchAndDisplayJackets(containerSelector, gender) {
     try {
         const response = await fetch(url);
         const items = await response.json();
-        displayMaleJackets(items);
+        displayJackets(items, containerSelector, gender);
     } catch (error) {
         console.log(error);
-        displayMessage("#featured-productsmen", "Ooops...There was an error fetching the jackets", "error");
+        displayMessage(containerSelector, `Ooops...There was an error fetching the jackets for ${gender}`, "error");
     }
 }
 
-function displayMaleJackets(items) {
-    const jacketContainer = document.querySelector("#featured-productsmen");
+function displayJackets(items, containerSelector, gender) {
+    const jacketContainer = document.querySelector(containerSelector);
+
+    if (!jacketContainer) {
+        console.error(`Container not found: ${containerSelector}`);
+        return;
+    }
 
     jacketContainer.innerHTML = "";
 
-    // Use a for loop to iterate through the items
     for (let i = 0; i < items.length; i++) {
         const item = items[i];
 
-        // Check if the item is a male jacket
-        if (item.gender === "Male") {
-            // Check if the product is on sale
-            const isOnSale = item.onSale;
+        if (item.gender === gender) {
+            const productContainer = document.createElement('div');
+            productContainer.classList.add('product');
 
             // Check if the product has a discounted price
             const hasDiscountedPrice = item.discountedPrice !== undefined;
-
-            const productContainer = document.createElement('div');
-            productContainer.classList.add('product');
 
             const imageElement = document.createElement('img');
             imageElement.classList.add('product-images');
@@ -80,11 +79,12 @@ function displayMaleJackets(items) {
             priceContainer.classList.add('products');
             priceContainer.textContent = 'Price: ';
 
-            const priceValue = isOnSale ? `$${item.discountedPrice.toFixed(2)}` : `$${item.price.toFixed(2)}`;
+            const priceValue = `$${hasDiscountedPrice ? item.discountedPrice.toFixed(2) : item.price.toFixed(2)}`;
+
 
             const priceElement = document.createElement('span');
-            priceElement.style.color = isOnSale ? 'red' : 'inherit';
-            priceElement.style.textDecoration = isOnSale ? 'line-through' : 'none';
+            priceElement.style.color = hasDiscountedPrice ? 'red' : 'inherit';
+            priceElement.style.textDecoration = hasDiscountedPrice ? 'line-through' : 'none';
             priceElement.textContent = priceValue;
 
             priceContainer.appendChild(priceElement);
@@ -93,7 +93,7 @@ function displayMaleJackets(items) {
             const onSaleElement = document.createElement('div');
             onSaleElement.classList.add('on-sale');
             onSaleElement.style.color = 'green';
-            onSaleElement.textContent = isOnSale ? `On Sale: $${item.discountedPrice.toFixed(2)}` : '';
+            onSaleElement.textContent = hasDiscountedPrice ? `On Sale: $${item.discountedPrice.toFixed(2)}` : '';
 
             // Create the Add to Cart button
             const addToCartButton = document.createElement('button');
@@ -130,6 +130,7 @@ function displayMaleJackets(items) {
         }
     }
 
+    // Common code for updating event listener
     const addButtons = document.querySelectorAll(".add-cta");
 
     addButtons.forEach(function (button) {
@@ -138,5 +139,6 @@ function displayMaleJackets(items) {
 }
 
 document.addEventListener('DOMContentLoaded', function () {
-    fetchJackets();
+    fetchAndDisplayJackets("#featured-productswomen", "Female");
+    fetchAndDisplayJackets("#featured-productsmen", "Male");
 });

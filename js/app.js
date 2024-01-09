@@ -14,11 +14,4 @@ function router() {
     }
 }
 
-//     if(path === "/" || "/index.html") {
-//         console.log("home page")
-//     } else if(path === "/Pages/SpecificProduct.html") {
-//         console.log("product page")
-//     }
-// }
-
 router();

@@ -12,6 +12,4 @@ const data = Object.fromEntries(entries);
 console.log(data);
 }
 
-
-
 form.addEventListener("submit", handleSubmit);
