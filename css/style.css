@@ -37,12 +37,13 @@ body {
 
 .message {
   padding: 20px;
-  border-color: 1px black solid;
 }
 
-.message.error {
+.message, .error {
   color: red;
-  border-color: red; 
+  background-color: var(--color-background);
+  border: red 1px solid;
+  margin: 30px auto;
 }
 
 .message.warning {
@@ -134,6 +135,22 @@ header .nav .links a:hover {
 /* .cart:hover {
   font-size: larger;
 } */
+
+/* Loading indicator */
+
+.loading {
+  font-size: 20px;
+  margin-left: 30px;
+}
+
+.fas {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
 
 /* --------------- Main--------------- */
 section {
@@ -592,7 +609,7 @@ hr {
   justify-content: center;
 } */
 
-.cta, .add-cta {
+.cta {
   /* main buttons */
   border: none;
   padding: 10px 20px;
@@ -603,10 +620,9 @@ hr {
   text-transform: uppercase;
   cursor: pointer;
   width: 180px;
-  margin: 8px;
 }
 
-.cta-buttons div a, .add-cta {
+.cta-buttons div a {
   display: flex;
   text-decoration: none;
   justify-content: center;
@@ -616,7 +632,29 @@ hr {
   padding: 10px;
 }
 
-.cta:hover {
+.view {
+  display: flex;
+  justify-content: center;
+  color: blue;
+  margin: 20px auto;
+}
+
+.add-cta {
+  display: block;
+  position: relative;
+  margin: 20px auto;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  color: var(--color-product);
+  background-color: var(--color-theme);
+  font-size: 14px;
+  text-transform: uppercase;
+  cursor: pointer;
+  width: 180px;
+}
+
+.cta, .add-cta:hover {
   /* main buttons hover */
   background-color: #154754;
 }

@@ -21,7 +21,7 @@ async function fetchJackets() {
         displayFemaleJackets(items);
     } catch (error) {
         console.log(error);
-        displayMessage("#message", "Ooops...There was an error fetching the jackets", "error");
+        displayMessage("#featured-productswomen", "Ooops...There was an error fetching the jackets", "error");
     }
 }
 
@@ -38,8 +38,6 @@ function displayFemaleJackets(items) {
         if (item.gender === "Female") {
             // Check if the product is on sale
             const isOnSale = item.onSale;
-
-            // Check if the product has a discounted price
             const hasDiscountedPrice = item.discountedPrice !== undefined;
 
             const productContainer = document.createElement('div');
