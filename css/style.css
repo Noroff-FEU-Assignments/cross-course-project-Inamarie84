@@ -613,6 +613,7 @@ hr {
   /* main buttons */
   border: none;
   padding: 10px 20px;
+  margin: 20px;
   border-radius: 5px;
   color: var(--color-product);
   background-color: var(--color-theme);
@@ -642,6 +643,7 @@ hr {
 .add-cta {
   display: block;
   position: relative;
+  text-align: center;
   margin: 20px auto;
   border: none;
   padding: 10px 20px;
@@ -649,6 +651,7 @@ hr {
   color: var(--color-product);
   background-color: var(--color-theme);
   font-size: 14px;
+  text-decoration: none;
   text-transform: uppercase;
   cursor: pointer;
   width: 180px;
