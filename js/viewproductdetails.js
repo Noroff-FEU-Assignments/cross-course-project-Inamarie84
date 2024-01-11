@@ -1,6 +1,7 @@
 import { url } from "./constants.js";
 import { displayMessage } from "./ui/shared/displayMessage.js";
 import getQueryParam from "./helpers/getQueryParam.js";
+import { createSizeDropdown } from "./sizeDropdown.js";
 
 // const queryString = document.location.search;
 // const params = new URLSearchParams(queryString);
@@ -42,7 +43,7 @@ fetchJacket(id);
 
 function displayJacket(jacket) {
 
-  const { title: jacketTitle, price: jacketPrice, image: jacketImage, description: jacketDescription, baseColor: jacketColor } = jacket;
+  const { title: jacketTitle, price: jacketPrice, image: jacketImage, description: jacketDescription, baseColor: jacketColor, sizes: jacketSizes } = jacket;
 
   document.title = `${jacketTitle} | ${document.title}`;
 
@@ -64,6 +65,12 @@ function displayJacket(jacket) {
   const description = document.createElement("p");
   description.textContent = jacketDescription;
 
+  const sizeDropdownContainer = document.createElement("div");
+  sizeDropdownContainer.classList.add("size-dropdown-container");
+
+  const sizeDropdown = createSizeDropdown(jacketSizes);
+  sizeDropdownContainer.appendChild(sizeDropdown);
+
   const price = document.createElement("h2");
   price.textContent = `$ ${jacketPrice}`;
 
@@ -71,6 +78,7 @@ function displayJacket(jacket) {
   container.appendChild(image);
   container.append(description);
   container.append(baseColor);
+  container.appendChild(sizeDropdownContainer);
   container.append(price);
   
 
@@ -96,6 +104,8 @@ function displayJacket(jacket) {
 
   // Function for handling "Add to Cart" button click
   function addToCartButtonClick() {
+    const selectedSize = sizeDropdown.value;
+    console.log("Added to Cart - Size: ", selectedSize);
     // Add your logic for adding the item to the cart
     console.log("Added to Cart");
   }

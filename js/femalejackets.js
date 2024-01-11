@@ -1,12 +1,13 @@
 import { url } from "./constants.js";
 import { displayMessage } from "./ui/shared/displayMessage.js";
+import { createSizeDropdown } from "./sizeDropdown.js";
 
 function handleClick(event) {
   const jacket = {
       id: event.target.dataset.id,
       title: event.target.dataset.title,
       price: event.target.dataset.price,
-      size: event.target.closest('.product').dataset.selectedSize
+      size: event.target.closest(".product").dataset.selectedSize
   };
 
   const cart = JSON.parse(localStorage.getItem("cart")) || [];
@@ -38,13 +39,16 @@ function displayFemaleJackets(items) {
         if (item.gender === "Female") {
             // Check if the product is on sale
             const isOnSale = item.onSale;
+
+
+            // Check if the product has a discounted price
             const hasDiscountedPrice = item.discountedPrice !== undefined;
 
             const productContainer = document.createElement("div");
             productContainer.classList.add("product");
 
             const imageElement = document.createElement("img");
-            imageElement.classList.add('product-images');
+            imageElement.classList.add("product-images");
             imageElement.src = item.image;
             imageElement.alt = "Product Image";
 
@@ -58,19 +62,7 @@ function displayFemaleJackets(items) {
             sizeContainer.classList.add("products");
             sizeContainer.textContent = "Size: ";
 
-            const sizeDropdown = document.createElement("select");
-            sizeDropdown.classList.add("size-dropdown");
-
-            const sizeOptions = item.sizes.map(size => {
-                const option = document.createElement("option");
-                option.value = size;
-                option.textContent = size;
-                return option;
-            });
-
-            
-
-            sizeOptions.forEach(option => sizeDropdown.appendChild(option));
+            const sizeDropdown = createSizeDropdown(item.sizes);
 
             sizeContainer.appendChild(sizeDropdown);
 
@@ -118,14 +110,7 @@ function displayFemaleJackets(items) {
             productContainer.appendChild(addToCartButton);
             productContainer.appendChild(viewDetailsLink);
 
-            jacketContainer.appendChild(productContainer);
-
-            // Update the event listener for the size dropdown
-            sizeDropdown.addEventListener("change", function () {
-                const selectedSize = this.value;
-                productContainer.dataset.selectedSize = selectedSize;
-                // Optionally, you can update the displayed size or perform other actions here
-            });
+            jacketContainer.appendChild(productContainer);       
         }
     }
 
