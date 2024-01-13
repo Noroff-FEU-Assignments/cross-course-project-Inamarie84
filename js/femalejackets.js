@@ -37,12 +37,9 @@ function displayFemaleJackets(items) {
 
         // Check if the item is a female jacket
         if (item.gender === "Female") {
+
             // Check if the product is on sale
             const isOnSale = item.onSale;
-
-
-            // Check if the product has a discounted price
-            const hasDiscountedPrice = item.discountedPrice !== undefined;
 
             const productContainer = document.createElement("div");
             productContainer.classList.add("product");
