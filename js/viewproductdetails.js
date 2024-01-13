@@ -13,6 +13,7 @@ if (!id) {
   window.location.href = "/";
 }
 
+
 // const productUrl = `${url}/${id}`;
 
 // console.log(productUrl);
