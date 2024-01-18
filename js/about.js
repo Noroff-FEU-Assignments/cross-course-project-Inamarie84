@@ -97,3 +97,9 @@ mainElement.appendChild(aboutSection2);
 
 // Append the main element to the body or another container in your HTML
 document.body.appendChild(mainElement);
+
+// Identify the footer element
+const footerElement = document.querySelector('footer');
+
+// Insert the mainElement before the footer
+document.body.insertBefore(mainElement, footerElement);

@@ -1,4 +1,4 @@
-// sizeDropdown.js
+// sizedropdown.js
 export function createSizeDropdown(sizes) {
     const sizeDropdown = document.createElement("select");
     sizeDropdown.classList.add("size-dropdown");

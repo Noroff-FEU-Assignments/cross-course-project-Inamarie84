@@ -1,6 +1,6 @@
 import { url } from "./constants.js";
 import { displayMessage } from "./ui/shared/displayMessage.js";
-import { createSizeDropdown } from "./sizeDropdown.js";
+import { createSizeDropdown } from "./sizedropdown.js";
 
 function handleClick(event) {
   const jacket = {
