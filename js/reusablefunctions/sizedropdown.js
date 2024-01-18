@@ -14,3 +14,5 @@ export function createSizeDropdown(sizes) {
 
     return sizeDropdown;
 }
+
+

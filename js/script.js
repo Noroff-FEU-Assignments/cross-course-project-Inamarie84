@@ -1,8 +1,8 @@
-// Create main element
+import { updateCartCount } from "./reusablefunctions/updatecartcount.js";
+
 const mainElement = document.createElement('main');
 mainElement.classList.add('background', 'main-page');
 
-// Create sections
 const section1 = document.createElement('section');
 const h1 = document.createElement('h1');
 h1.textContent = 'X Pushing The Comfort Zone X';
@@ -21,11 +21,9 @@ h3.textContent = 'Suitable For Any Outdoor Adventure';
 section3.appendChild(h3);
 mainElement.appendChild(section3);
 
-// Create cta-buttons div
 const ctaButtonsDiv = document.createElement('div');
 ctaButtonsDiv.classList.add('cta-buttons');
 
-// Create Shop Men's link
 const menLinkDiv = document.createElement('div');
 const menLink = document.createElement('a');
 menLink.href = '/pages/malejackets.html';
@@ -34,7 +32,6 @@ menLink.textContent = "Shop Men's";
 menLinkDiv.appendChild(menLink);
 ctaButtonsDiv.appendChild(menLinkDiv);
 
-// Create Shop Women's link
 const womenLinkDiv = document.createElement('div');
 const womenLink = document.createElement('a');
 womenLink.href = '/pages/femalejackets.html';
@@ -45,11 +42,12 @@ ctaButtonsDiv.appendChild(womenLinkDiv);
 
 mainElement.appendChild(ctaButtonsDiv);
 
-// Append the dynamically created elements to the body
 document.body.appendChild(mainElement);
 
-// Identify the footer element
 const footerElement = document.querySelector('footer');
 
-// Insert the mainElement before the footer
 document.body.insertBefore(mainElement, footerElement);
+
+document.addEventListener('DOMContentLoaded', function () {
+    updateCartCount();
+  });

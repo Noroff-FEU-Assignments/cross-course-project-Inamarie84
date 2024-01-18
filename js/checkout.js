@@ -1,17 +1,15 @@
+import { updateCartCount } from "./reusablefunctions/updatecartcount.js";
+
 const cart = JSON.parse(localStorage.getItem("cart"));
-
-console.log(cart);
-
 const cartContainer = document.querySelector("#cart-container");
 
-if(cart === null) {
-    cartContainer.innerText = "You have no jackets in your cart"; 
+if(cart === null || cart.length === 0) {
+    cartContainer.innerHTML = "<p>You have no jackets in your cart</p>"; 
 
     const goShoppingButton = document.createElement('button');
     goShoppingButton.textContent = 'Go Shopping';
     goShoppingButton.classList.add('cta');
     goShoppingButton.addEventListener('click', function () {
-        // Navigate to another page (update the href accordingly)
         window.location.href = '/index.html';
     });
     
@@ -30,5 +28,8 @@ else {
                                     <button class="cta">Continue Shopping</button>`;
     });
     
+    updateCartCount();
 }
+
+
 

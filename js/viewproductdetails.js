@@ -1,22 +1,14 @@
 import { url } from "./constants.js";
 import { displayMessage } from "./ui/shared/displayMessage.js";
 import getQueryParam from "./helpers/getQueryParam.js";
-import { createSizeDropdown } from "./sizeDropdown.js";
-
-// const queryString = document.location.search;
-// const params = new URLSearchParams(queryString);
-// const id = params.get("id");
+import { createSizeDropdown } from "./reusablefunctions/sizedropdown.js";
+import { updateCartCount } from "./reusablefunctions/updatecartcount.js";
 
 const id = getQueryParam("id");
 
 if (!id) {
   window.location.href = "/";
 }
-
-
-// const productUrl = `${url}/${id}`;
-
-// console.log(productUrl);
 
 async function fetchJacket(id) {
   const productUrl = `${url}/${id}`;
@@ -26,9 +18,9 @@ async function fetchJacket(id) {
 
     if (response.ok === true) {
       const item = await response.json();
+      updateCartCount();
       return displayJacket(item);
     }
-    // create html for the single object
 
     throw new Error("API call failed");
   } catch (error) {
@@ -56,8 +48,8 @@ function displayJacket(jacket) {
   heading.textContent = jacketTitle;
 
   const image = document.createElement("img");
-  image.src = jacketImage; // Replace 'imageUrl' with the property that holds the image URL in your jacket object
-  image.alt = jacketTitle; // Set the alt attribute for accessibility
+  image.src = jacketImage; 
+  image.alt = jacketTitle; 
   image.classList.add("detail-image");
 
   const baseColor = document.createElement("p");
@@ -83,16 +75,16 @@ function displayJacket(jacket) {
   container.append(price);
   
 
-  // Add "Add to Cart" link
+  // "Add to Cart" link
   const addToCartLink = document.createElement("a");
   addToCartLink.textContent = "Add to Cart";
-  addToCartLink.href = "/Pages/checkout.html"; // Set the appropriate URL
+  addToCartLink.href = "/Pages/checkout.html";
   addToCartLink.classList.add("add-cta");
 
   // Add "Continue Shopping" link
   const continueShoppingLink = document.createElement("a");
   continueShoppingLink.textContent = "Continue Shopping";
-  continueShoppingLink.href = "/"; // Set the appropriate URL
+  continueShoppingLink.href = "/"; 
   continueShoppingLink.classList.add("add-cta");
 
   // Append links to the container
@@ -106,9 +98,8 @@ function displayJacket(jacket) {
   // Function for handling "Add to Cart" button click
   function addToCartButtonClick() {
     const selectedSize = sizeDropdown.value;
-    console.log("Added to Cart - Size: ", selectedSize);
-    // Add your logic for adding the item to the cart
-    console.log("Added to Cart");
+    // console.log("Added to Cart - Size: ", selectedSize);
+    // console.log("Added to Cart");
   }
 
   // Function for handling "Continue Shopping" button click
@@ -117,3 +108,4 @@ function displayJacket(jacket) {
     console.log("Continue Shopping");
   }
 }
+
