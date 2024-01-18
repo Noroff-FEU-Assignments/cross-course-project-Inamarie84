@@ -1,6 +1,7 @@
 import { url } from "./constants.js";
 import { displayMessage } from "./ui/shared/displayMessage.js";
-import { createSizeDropdown } from "./sizedropdown.js";
+import { createSizeDropdown } from "./reusablefunctions/sizedropdown.js";
+import { updateCartCount } from "./reusablefunctions/updatecartcount.js";
 
 let femaleContainer =
   document.querySelector("#featured-productswomen") ||
@@ -25,6 +26,8 @@ function handleClick(event) {
   const cart = JSON.parse(localStorage.getItem("cart")) || [];
   cart.push(jacket);
   localStorage.setItem("cart", JSON.stringify(cart));
+
+  updateCartCount();
 }
 
 async function fetchAndDisplayJackets(containerId, gender) {
