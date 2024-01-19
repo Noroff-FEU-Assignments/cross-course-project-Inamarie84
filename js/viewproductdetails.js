@@ -75,8 +75,8 @@ function displayJacket(jacket) {
   container.append(price);
   
 
-  // "Add to Cart" link
-  const addToCartLink = document.createElement("a");
+  // "Add to Cart" button
+  const addToCartLink = document.createElement("button");
   addToCartLink.textContent = "Add to Cart";
   // addToCartLink.href = "/Pages/checkout.html";
   addToCartLink.classList.add("add-cta");
@@ -91,21 +91,21 @@ function displayJacket(jacket) {
   container.appendChild(addToCartLink);
   container.appendChild(continueShoppingLink);
 
-  // Add click event listeners after appending to the DOM
+  // // Add click event listeners after appending to the DOM
   // addToCartLink.addEventListener("click", addToCartButtonClick);
-  continueShoppingLink.addEventListener("click", continueShoppingButtonClick);
+  // continueShoppingLink.addEventListener("click", continueShoppingButtonClick);
 
-  // Function for handling "Add to Cart" button click
-  function addToCartButtonClick() {
-    const selectedSize = sizeDropdown.value;
-    // console.log("Added to Cart - Size: ", selectedSize);
-    // console.log("Added to Cart");
-  }
+  // // Function for handling "Add to Cart" button click
+  // function addToCartButtonClick() {
+  //   const selectedSize = sizeDropdown.value;
+  //   // console.log("Added to Cart - Size: ", selectedSize);
+  //   // console.log("Added to Cart");
+  // }
 
-  // Function for handling "Continue Shopping" button click
-  function continueShoppingButtonClick() {
-    // Add your logic for continuing shopping
-    console.log("Continue Shopping");
-  }
+  // // Function for handling "Continue Shopping" button click
+  // function continueShoppingButtonClick() {
+  //   // Add your logic for continuing shopping
+  //   console.log("Continue Shopping");
+  // }
 }
 
