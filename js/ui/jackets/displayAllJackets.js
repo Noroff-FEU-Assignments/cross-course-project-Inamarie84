@@ -57,7 +57,7 @@ export function displayJackets(items, container) {
 		addToCartButton.textContent = "Add to cart";
 
 		const viewDetailsLink = document.createElement("a");
-		viewDetailsLink.href = `SpecificProduct.html?id=${item.id}`;
+		viewDetailsLink.href = `viewproductdetails.html?id=${item.id}`;
 		viewDetailsLink.classList.add("view");
 		viewDetailsLink.textContent = "View details";
 

@@ -25,7 +25,8 @@ else {
                                     <div class="price"><p>Price: ${price}</p></div> 
                                     <div>Size: ${size}</div>
                                     <button class="add-cta">Checkout</button>
-                                    <button class="cta">Continue Shopping</button>`;
+                                    <button class="cta">Continue Shopping</button>
+                                    <button class="remove">Remove from cart</button>`;
     });
     
     updateCartCount();

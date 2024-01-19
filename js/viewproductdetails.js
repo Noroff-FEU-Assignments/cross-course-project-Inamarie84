@@ -78,7 +78,7 @@ function displayJacket(jacket) {
   // "Add to Cart" link
   const addToCartLink = document.createElement("a");
   addToCartLink.textContent = "Add to Cart";
-  addToCartLink.href = "/Pages/checkout.html";
+  // addToCartLink.href = "/Pages/checkout.html";
   addToCartLink.classList.add("add-cta");
 
   // Add "Continue Shopping" link
@@ -92,7 +92,7 @@ function displayJacket(jacket) {
   container.appendChild(continueShoppingLink);
 
   // Add click event listeners after appending to the DOM
-  addToCartLink.addEventListener("click", addToCartButtonClick);
+  // addToCartLink.addEventListener("click", addToCartButtonClick);
   continueShoppingLink.addEventListener("click", continueShoppingButtonClick);
 
   // Function for handling "Add to Cart" button click

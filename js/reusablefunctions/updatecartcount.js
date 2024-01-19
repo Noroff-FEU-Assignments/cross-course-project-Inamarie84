@@ -14,4 +14,9 @@ export function updateCartCount() {
     const cart = JSON.parse(localStorage.getItem("cart")) || [];
     return cart.length;
   }
+
+export function updateCart() {
+    const cart = JSON.parse(localStorage.getItem("cart")) || [];
+    updateCartCount(cart.length);
+  }
   

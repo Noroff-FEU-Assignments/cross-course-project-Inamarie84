@@ -1,27 +1,8 @@
 import { url } from "./constants.js";
 import { displayMessage } from "./ui/shared/displayMessage.js";
-import { updateCartCount } from "./reusablefunctions/updatecartcount.js";
 import { displayJackets } from "./ui/jackets/displayAlljackets.js";
-
-function updateCart() {
-	const cart = JSON.parse(localStorage.getItem("cart")) || [];
-	updateCartCount(cart.length);
-}
-
-function handleClick(event) {
-	const jacket = {
-		id: event.target.dataset.id,
-		title: event.target.dataset.title,
-		price: event.target.dataset.price,
-		size: event.target.closest(".product").dataset.selectedSize,
-	};
-
-	const cart = JSON.parse(localStorage.getItem("cart")) || [];
-	cart.push(jacket);
-	localStorage.setItem("cart", JSON.stringify(cart));
-
-	updateCart();
-}
+import { handleClick } from "./buttons/addtocarthandleclick.js";
+import { updateCartCount, updateCart } from "./reusablefunctions/updatecartcount.js";
 
 async function fetchAndDisplayJackets() {
 	const container = document.querySelector("#featured-products");
