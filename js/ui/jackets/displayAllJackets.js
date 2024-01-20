@@ -1,5 +1,4 @@
 import { createSizeDropdown } from "../../reusablefunctions/sizedropdown.js";
-// import { updateCartCount } from "./reusablefunctions/updatecartcount.js";
 
 export function displayJackets(items, container) {
 	container.innerHTML = "";

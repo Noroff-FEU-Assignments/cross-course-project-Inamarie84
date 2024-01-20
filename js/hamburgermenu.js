@@ -1,16 +1,16 @@
 
-  // hamburger menu 
+  // // hamburger menu 
 
-  document.addEventListener('DOMContentLoaded', function () {
-    const menuCheckbox = document.getElementById('menu-checkbox');
-    const header = document.querySelector('header');
+  // document.addEventListener('DOMContentLoaded', function () {
+  //   const menuCheckbox = document.getElementById('menu-checkbox');
+  //   const header = document.querySelector('header');
 
-    console.dir(menuCheckbox);
+  //   console.dir(menuCheckbox);
   
-    menuCheckbox.addEventListener('change', function () {
-      header.classList.toggle('menu-visible', menuCheckbox.checked);
-      header.classList.toggle('menu-hidden', !menuCheckbox.checked);
-    });
-  });
+  //   menuCheckbox.addEventListener('change', function () {
+  //     header.classList.toggle('menu-visible', menuCheckbox.checked);
+  //     header.classList.toggle('menu-hidden', !menuCheckbox.checked);
+  //   });
+  // });
 
 
