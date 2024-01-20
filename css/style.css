@@ -143,7 +143,7 @@ header .nav .links a:hover {
   margin-left: 30px;
 }
 
-.spinnner {
+.fas.spinner {
   animation: spin 1s linear infinite;
 }
 

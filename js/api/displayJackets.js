@@ -2,7 +2,7 @@ import { url } from "../constants.js";
 import { displayMessage } from "../ui/shared/displayMessage.js";
 import { displayJackets } from "../ui/jackets/displayAlljackets.js";
 import { handleClick } from "../buttons/addtocarthandleclick.js";
-import { updateCart } from "../reusablefunctions/updatecartcount.js";
+import { updateCart } from "../utils/updatecartcount.js";
 
 async function fetchAndDisplayJackets() {
 	const container = document.querySelector("#featured-products");

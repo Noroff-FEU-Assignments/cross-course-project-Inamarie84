@@ -1,4 +1,4 @@
-import { createSizeDropdown } from "../../reusablefunctions/sizedropdown.js";
+import { createSizeDropdown } from "../../utils/sizedropdown.js";
 
 export function displayJackets(items, container) {
 	container.innerHTML = "";

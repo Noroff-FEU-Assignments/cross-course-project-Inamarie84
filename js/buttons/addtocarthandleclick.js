@@ -1,6 +1,6 @@
 // addtocarthandleclick.js
 
-import { updateCart } from "../reusablefunctions/updatecartcount.js";
+import { updateCart } from "../utils/updatecartcount.js";
 
 export function handleClick(event) {
   const jacket = {

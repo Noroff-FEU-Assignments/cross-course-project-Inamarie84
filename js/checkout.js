@@ -1,4 +1,4 @@
-import { updateCartCount } from "./reusablefunctions/updatecartcount.js";
+import { updateCartCount } from "./utils/updatecartcount.js";
 
 const cart = JSON.parse(localStorage.getItem("cart"));
 const cartContainer = document.querySelector("#cart-container");

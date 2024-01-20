@@ -1,9 +1,8 @@
 import { url } from "../constants.js";
 import { displayMessage } from "../ui/shared/displayMessage.js";
 import getQueryParam from "../helpers/getQueryParam.js";
-import { updateCartCount } from "../reusablefunctions/updatecartcount.js";
+import { updateCartCount } from "../utils/updatecartcount.js";
 import { displayJacket } from "../ui/jackets/displayJacket.js";
-// import { displayJacket } from "../ui/jackets/displayJacket.js";
 
 const id = getQueryParam("id");
 
