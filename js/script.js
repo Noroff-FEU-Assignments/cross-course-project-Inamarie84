@@ -10,6 +10,7 @@ section1.appendChild(h1);
 mainElement.appendChild(section1);
 
 const section2 = document.createElement("section");
+section2.classList.add("main-page"); // Add your desired class name
 const h2 = document.createElement("h2");
 h2.textContent = "Our Extremely Waterproof And Breathable Rain Gear Keeps You Dry On The Wettest Days";
 section2.appendChild(h2);

@@ -24,7 +24,7 @@ else {
         cartContainer.innerHTML += `<div class="product"><h3>${title}</h3></div> 
                                     <div class="price"><p>Price: ${price}</p></div> 
                                     <div>Size: ${size}</div>
-                                    <button class="add-cta">Checkout</button>
+                                    <button class="checkout-cta"><a href="checkoutsuccess.html">Checkout</a></button>
                                     <button class="cta">Continue Shopping</button>
                                     <button class="remove">Remove from cart</button>`;
     });

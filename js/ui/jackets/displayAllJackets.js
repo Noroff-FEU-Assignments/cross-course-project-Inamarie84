@@ -55,6 +55,10 @@ export function displayJackets(items, container) {
 		addToCartButton.dataset.price = item.price;
 		addToCartButton.textContent = "Add to cart";
 
+		const checkoutButton = document.createElement("button");
+		checkoutButton.classList.add("checkout-cta");
+		checkoutButton.textContent = "Checkout";
+
 		const viewDetailsLink = document.createElement("a");
 		viewDetailsLink.href = `viewproductdetails.html?id=${item.id}`;
 		viewDetailsLink.classList.add("view");
@@ -67,9 +71,14 @@ export function displayJackets(items, container) {
 		productContainer.appendChild(priceContainer);
 		productContainer.appendChild(onSaleElement);
 		productContainer.appendChild(addToCartButton);
+		productContainer.appendChild(checkoutButton);
 		productContainer.appendChild(viewDetailsLink);
 
 		container.appendChild(productContainer);
+
+		checkoutButton.addEventListener("click", function () {
+			window.location.href = "/Pages/checkout.html";
+		});		
 
 		sizeDropdown.addEventListener("change", function () {
 			const selectedSize = this.value;

@@ -131,11 +131,6 @@ header .nav .links a:hover {
   text-decoration: underline;
 }
 
-/* makes cart larger when hover over */
-/* .cart:hover {
-  font-size: larger;
-} */
-
 /* Loading indicator */
 
 .loading {
@@ -153,11 +148,11 @@ header .nav .links a:hover {
 }
 
 /* --------------- Main--------------- */
-section {
+/* section {
   margin-left: 40px;
   min-height: 120px;
   color: var(--color-font);
-}
+} */
 
 .main-page h1 {
   font-size: 60px;
@@ -170,12 +165,16 @@ section {
 .main-page h2 {
   font-size: 40px;
   font-weight: lighter;
+  margin: 40px;
+  padding: 20px;
 }
 
 .main-page h3 {
   font-size: 30px;
   font-style: italic;
   text-shadow: 2px 4px 4px #c1beba;
+  margin: 40px;
+  padding: 20px;
 }
 
 /* Men - Women */
@@ -242,10 +241,10 @@ section {
   min-height: 80%;
 }
 
-/* .product:hover {
+.product:hover {
   border: 2px solid black;
   box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
-} */
+}
 
 .product img {
   box-sizing: border-box;
@@ -577,19 +576,6 @@ hr {
   padding-bottom: 20px;
 }
 
-/* background for specificproduct
-.bg-product {
-  background-image: url(../images/backgroundsp.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position-x: top;
-  background-position-y: bottom;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-} */
-
 /* background men*/
 .intro-men {
   background: url(../images/backgroundmen.jpg) center no-repeat;
@@ -603,11 +589,6 @@ hr {
 }
 
 /* Buttons */
-
-/* .view {
-  color: var(--color-footer);
-  justify-content: center;
-} */
 
 .cta {
   /* main buttons */
@@ -629,7 +610,7 @@ hr {
   justify-content: center;
   font-size: 16px;
   color: var(--color-main);
-  margin: 20px 40px;
+  margin: 20px 60px;
   padding: 10px;
 }
 
@@ -640,7 +621,7 @@ hr {
   margin: 20px auto;
 }
 
-.add-cta {
+.add-cta, .checkout-cta {
   display: block;
   position: relative;
   text-align: center;
@@ -657,9 +638,17 @@ hr {
   width: 180px;
 }
 
-.cta, .add-cta:hover {
+.checkout-cta {
+  background-color: white;
+  color: black;
+  text-decoration: none;
+}
+
+.cta:hover, 
+.add-cta:hover, 
+.checkout-cta:hover {
   /* main buttons hover */
-  background-color: #154754;
+  background-color: #C1BEBA;
 }
 
 .cta a {

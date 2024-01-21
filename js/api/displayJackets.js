@@ -1,7 +1,7 @@
 import { url } from "../constants.js";
 import { displayMessage } from "../ui/shared/displayMessage.js";
 import { displayJackets } from "../ui/jackets/displayAlljackets.js";
-import { handleClick } from "../buttons/addtocarthandleclick.js";
+import { handleClick } from "../handlebutton/addtocarthandleclick.js";
 import { updateCart } from "../utils/updatecartcount.js";
 
 async function fetchAndDisplayJackets() {

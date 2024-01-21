@@ -52,5 +52,6 @@ export function displayJacket(jacket) {
     container.appendChild(addToCartButton);
     container.appendChild(continueShoppingLink);
   }
+
   
   
