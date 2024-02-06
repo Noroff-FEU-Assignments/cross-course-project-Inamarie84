@@ -77,7 +77,7 @@ export function displayJackets(items, container) {
 		container.appendChild(productContainer);
 
 		checkoutButton.addEventListener("click", function () {
-			window.location.href = "/Pages/checkout.html";
+			window.location.href = "/checkout.html";
 		});		
 
 		sizeDropdown.addEventListener("change", function () {

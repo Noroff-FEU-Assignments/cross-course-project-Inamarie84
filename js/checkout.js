@@ -10,7 +10,7 @@ if(cart === null || cart.length === 0) {
     goShoppingButton.textContent = 'Go Shopping';
     goShoppingButton.classList.add('cta');
     goShoppingButton.addEventListener('click', function () {
-        window.location.href = '/index.html';
+        window.location.href = '/';
     });
     
     cartContainer.appendChild(goShoppingButton);

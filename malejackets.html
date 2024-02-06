@@ -4,36 +4,47 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="descripton" content="Your Rainy Days shopping cart">
-    <title>Rainy Days | Checkout</title>
+    <meta name="descripton" content="Men's Rainy Days Jackets">
+    <title>Rainy Days | Men</title>
     <link href="../css/style.css" rel="stylesheet">
     <link href="../css/media.css" rel="stylesheet">
     <script src="https://kit.fontawesome.com/eb56cff7a8.js" crossorigin="anonymous"></script>
   </head>
   <body>
     <header>
-      <a href="/index.html"><img src="../images/RainyDays_Logo.png" alt="Logo of RainyDays.com" class="logo"></a>
+      <a href="/"><img src="../images/RainyDays_Logo.png" alt="Logo of RainyDays.com" class="logo"></a>
       <input type="checkbox" id="menu-checkbox">
       <div class="nav">
         <nav class="links">
-          <a href="/index.html">Home</a>
-          <a href="/pages/malejackets.html">Men</a>
-          <a href="/pages/femalejackets.html">Women</a>
-          <a href="/pages/about.html">About</a>
-          <a href="/pages/contact.html">Contact</a>
+          <a href="/">Home</a>
+          <a href="/malejackets.html" class="active">Men</a>
+          <a href="/femalejackets.html">Women</a>
+          <a href="/about.html">About</a>
+          <a href="/contact.html">Contact</a>
         </nav>
       </div>
       <div class="icons">
         <i class="fa-solid fa-regular fa-heart"></i>
         <i class="fa-solid fa-magnifying-glass"></i>
-        <a href="/pages/checkout.html" class="cart" title="Shopping Cart"><i class="fa-solid fa-cart-plus"></i><span id="cartItemCount">0</span></a>
+        <a href="/checkout.html" class="cart" title="Shopping Cart"><i class="fa-solid fa-cart-shopping"></i><span id="cartItemCount">0</span></a>
         <label for="menu-checkbox" class="hamburger-menu"><i class="fas fa-bars fa-xl"></i><span class="hidden">Menu</span></label>
       </div>
     </header>
-    <main class="background">
-      <section id="cart-container" class="cart-container">
-  
+    <main class="productpage">
+      <section class="intro-men">
+        <h1>MEN'S RAIN JACKETS</h1>
+        <p>
+          No matter which rainwear you choose, it features our innovative
+          weather protection technology, inspired by professionals who need a
+          heavy-duty shield from the elements.
+        </p>
       </section>
+      <section class="featuredproducts">
+      <div id="featured-products" class="featured-products">
+      <div class="loading">Loading...<i class="fas fa-solid fa-spinner spinner"></i></div>
+      <div id="message"></div>
+      </div>
+    </section>
     </main>
     <footer>
       <p>2022 Rainydays, inc &copy;</p>
@@ -46,6 +57,6 @@
         <i class="fa-brands fa-facebook"></i>
       </p>
     </footer>
-    <script src="/js/checkout.js" type="module"></script>
+    <script src="/js/api/displayJackets.js" type="module"></script>
   </body>
 </html>

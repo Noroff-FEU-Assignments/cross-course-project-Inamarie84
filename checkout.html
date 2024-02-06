@@ -4,15 +4,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="descripton" content="Homepage of Rainy Days Jackets - pushing the comfort zone">
-    <title>Rainy Days | Home</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inria+Sans&family=Roboto&display=swap" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
+    <meta name="descripton" content="Your Rainy Days shopping cart">
+    <title>Rainy Days | Checkout</title>
+    <link href="../css/style.css" rel="stylesheet">
     <link href="../css/media.css" rel="stylesheet">
     <script src="https://kit.fontawesome.com/eb56cff7a8.js" crossorigin="anonymous"></script>
-    
   </head>
   <body>
     <header>
@@ -20,7 +16,7 @@
       <input type="checkbox" id="menu-checkbox">
       <div class="nav">
         <nav class="links">
-          <a href="/" class="active">Home</a>
+          <a href="/">Home</a>
           <a href="/malejackets.html">Men</a>
           <a href="/femalejackets.html">Women</a>
           <a href="/about.html">About</a>
@@ -30,11 +26,15 @@
       <div class="icons">
         <i class="fa-solid fa-regular fa-heart"></i>
         <i class="fa-solid fa-magnifying-glass"></i>
-        <a href="/checkout.html" class="cart" title="Shopping Cart"><i class="fa-solid fa-cart-shopping"></i><span id="cartItemCount">0</span></a>
+        <a href="/checkout.html" class="cart" title="Shopping Cart"><i class="fa-solid fa-cart-plus"></i><span id="cartItemCount">0</span></a>
         <label for="menu-checkbox" class="hamburger-menu"><i class="fas fa-bars fa-xl"></i><span class="hidden">Menu</span></label>
       </div>
     </header>
-    
+    <main class="background">
+      <section id="cart-container" class="cart-container">
+  
+      </section>
+    </main>
     <footer>
       <p>2022 Rainydays, inc &copy;</p>
       <p>Free Shipping | Free returns</p>
@@ -46,6 +46,6 @@
         <i class="fa-brands fa-facebook"></i>
       </p>
     </footer>
-    <script src="js/script.js" type="module"></script>
+    <script src="/js/checkout.js" type="module"></script>
   </body>
 </html>

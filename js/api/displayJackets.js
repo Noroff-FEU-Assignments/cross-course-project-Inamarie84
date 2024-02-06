@@ -9,7 +9,7 @@ async function fetchAndDisplayJackets() {
 	const path = location.pathname;
 	console.log(path);
 
-	const gender = path === "/pages/malejackets.html" ? "Male" : "Female";
+	const gender = path === "/malejackets.html" ? "Male" : "Female";
 	console.log(gender);
 
 	try {
@@ -18,11 +18,11 @@ async function fetchAndDisplayJackets() {
 
 		const itemsByGender = Object.groupBy(items, (item) => item.gender);
 
-		console.log("itemsByGender", itemsByGender);
+		// console.log("itemsByGender", itemsByGender);
 
 		const itemsToDisplay = itemsByGender[gender];
 
-		console.log("itemsToDisplay", itemsToDisplay);
+		// console.log("itemsToDisplay", itemsToDisplay);
 
 		displayJackets(itemsToDisplay, container);
 		updateCart();
@@ -33,7 +33,7 @@ async function fetchAndDisplayJackets() {
 			button.addEventListener("click", handleClick);
 		});
 	} catch (error) {
-		console.log(error);
+		console.error(error);
 		displayMessage(container, `Ooops...There was an error fetching the jackets for ${gender}`, "error");
 	}
 }
