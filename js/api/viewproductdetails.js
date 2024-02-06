@@ -18,13 +18,13 @@ async function fetchJacket(id) {
 
     if (response.ok === true) {
       const item = await response.json();
-      updateCartCount();
+      // updateCartCount();
       return displayJacket(item);
     }
 
     throw new Error("API call failed");
   } catch (error) {
-    displayMessage("#product-container", error.message);
+    // displayMessage("#product-container", error.message);
   }
 }
 
