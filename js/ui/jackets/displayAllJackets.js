@@ -6,6 +6,9 @@ export function displayJackets(items, container) {
 	for (let i = 0; i < items.length; i++) {
 		const item = items[i];
 
+		// fiks denne: 
+		// const { id, title, price, discountedPrice, onSale, image, description, sizes } = item;
+
 		const isOnSale = item.onSale;
 
 		const productContainer = document.createElement("div");
@@ -53,6 +56,7 @@ export function displayJackets(items, container) {
 		addToCartButton.dataset.id = item.id;
 		addToCartButton.dataset.title = item.title;
 		addToCartButton.dataset.price = item.price;
+		addToCartButton.dataset.action = "add-to-cart";
 		addToCartButton.textContent = "Add to cart";
 
 		const checkoutButton = document.createElement("button");

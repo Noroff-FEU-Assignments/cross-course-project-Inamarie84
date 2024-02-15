@@ -2,7 +2,8 @@ import { url } from "../constants.js";
 import { displayMessage } from "../ui/shared/displayMessage.js";
 import { displayJackets } from "../ui/jackets/displayAlljackets.js";
 import { handleClick } from "../handlebutton/addtocarthandleclick.js";
-import { updateCart } from "../utils/updatecartcount.js";
+import { handleAddToCartButtons } from "../handlers/handleAddToCartButtons.js";
+// import { updateCart } from "../utils/updatecartcount.js";
 
 async function fetchAndDisplayJackets() {
 	const container = document.querySelector("#featured-products");
@@ -25,7 +26,8 @@ async function fetchAndDisplayJackets() {
 		// console.log("itemsToDisplay", itemsToDisplay);
 
 		displayJackets(itemsToDisplay, container);
-		updateCart();
+		handleAddToCartButtons();
+		// updateCart();
 
 		const addButtons = document.querySelectorAll(".add-cta");
 
@@ -40,5 +42,5 @@ async function fetchAndDisplayJackets() {
 
 document.addEventListener("DOMContentLoaded", function () {
 	fetchAndDisplayJackets();
-	updateCart();
+	// updateCart();
 });
