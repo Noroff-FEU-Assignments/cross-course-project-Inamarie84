@@ -621,6 +621,12 @@ hr {
   margin: 20px auto;
 }
 
+.remove {
+  display: block;
+  margin: 10px auto;
+
+}
+
 .add-cta, .checkout-cta {
   display: block;
   position: relative;
@@ -746,6 +752,7 @@ hr {
 #product-container p {
   margin: 20px 40px;
 }
+
 
 /* --------------- Footer--------------- */
 

@@ -6,7 +6,6 @@ export function displayJackets(items, container) {
 	for (let i = 0; i < items.length; i++) {
 		const item = items[i];
 
-		// fiks denne: 
 		// const { id, title, price, discountedPrice, onSale, image, description, sizes } = item;
 
 		const isOnSale = item.onSale;
@@ -56,6 +55,7 @@ export function displayJackets(items, container) {
 		addToCartButton.dataset.id = item.id;
 		addToCartButton.dataset.title = item.title;
 		addToCartButton.dataset.price = item.price;
+		addToCartButton.dataset.image = item.image;
 		addToCartButton.dataset.action = "add-to-cart";
 		addToCartButton.textContent = "Add to cart";
 
@@ -81,7 +81,7 @@ export function displayJackets(items, container) {
 		container.appendChild(productContainer);
 
 		checkoutButton.addEventListener("click", function () {
-			window.location.href = "/checkout.html";
+			window.location.href = "/cart.html";
 		});		
 
 		sizeDropdown.addEventListener("change", function () {

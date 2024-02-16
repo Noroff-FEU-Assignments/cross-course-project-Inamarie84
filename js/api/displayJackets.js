@@ -1,17 +1,16 @@
 import { url } from "../constants.js";
 import { displayMessage } from "../ui/shared/displayMessage.js";
 import { displayJackets } from "../ui/jackets/displayAlljackets.js";
-import { handleClick } from "../handlebutton/addtocarthandleclick.js";
 import { handleAddToCartButtons } from "../handlers/handleAddToCartButtons.js";
 // import { updateCart } from "../utils/updatecartcount.js";
 
 async function fetchAndDisplayJackets() {
 	const container = document.querySelector("#featured-products");
 	const path = location.pathname;
-	console.log(path);
+	// console.log(path);
 
 	const gender = path === "/malejackets.html" ? "Male" : "Female";
-	console.log(gender);
+	// console.log(gender);
 
 	try {
 		const response = await fetch(url);
@@ -31,9 +30,9 @@ async function fetchAndDisplayJackets() {
 
 		const addButtons = document.querySelectorAll(".add-cta");
 
-		addButtons.forEach(function (button) {
-			button.addEventListener("click", handleClick);
-		});
+		// addButtons.forEach(function (button) {
+		// 	button.addEventListener("click", handleClick);
+		// });
 	} catch (error) {
 		console.error(error);
 		displayMessage(container, `Ooops...There was an error fetching the jackets for ${gender}`, "error");
