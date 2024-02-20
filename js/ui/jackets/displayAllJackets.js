@@ -14,7 +14,7 @@ export function displayJackets(items, container) {
 		productContainer.classList.add("product");
 
 		const imageElement = document.createElement("img");
-		imageElement.classList.add("product-images");
+		imageElement.classList.add("image-container", "product-images");
 		imageElement.src = item.image;
 		imageElement.alt = "Product Image";
 

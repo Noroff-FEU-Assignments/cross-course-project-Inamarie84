@@ -42,6 +42,7 @@
 
   .hamburger-menu {
     display: inline-block;
+    cursor: pointer;
   }
 
   .nav {
