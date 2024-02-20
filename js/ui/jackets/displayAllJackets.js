@@ -9,14 +9,32 @@ export function displayJackets(items, container) {
 		// const { id, title, price, discountedPrice, onSale, image, description, sizes } = item;
 
 		const isOnSale = item.onSale;
+		const isFavorite = item.favorite;
 
 		const productContainer = document.createElement("div");
 		productContainer.classList.add("product");
 
-		const imageElement = document.createElement("img");
-		imageElement.classList.add("image-container", "product-images");
-		imageElement.src = item.image;
-		imageElement.alt = "Product Image";
+                // Create a container for image and tag
+				const imageContainer = document.createElement("div");
+				imageContainer.classList.add("image-container");
+		
+				// Check if the item is marked as a favorite
+				if (isFavorite) {
+					const tagElement = document.createElement("span");
+					tagElement.classList.add("tag");
+					tagElement.textContent = "Favorite";
+		
+					// Append tag first
+					imageContainer.appendChild(tagElement);
+				}
+		
+				const imageElement = document.createElement("img");
+				imageElement.classList.add("product-images");
+				imageElement.src = item.image;
+				imageElement.alt = "Product Image";
+		
+				// Append image
+				imageContainer.appendChild(imageElement);
 
 		const titleElement = document.createElement("h2");
 		titleElement.textContent = item.title;
@@ -68,8 +86,8 @@ export function displayJackets(items, container) {
 		viewDetailsLink.classList.add("view");
 		viewDetailsLink.textContent = "View details";
 
-		productContainer.appendChild(imageElement);
-		productContainer.appendChild(titleElement);
+		productContainer.appendChild(imageContainer);
+        productContainer.appendChild(titleElement);
 		productContainer.appendChild(descriptionElement);
 		productContainer.appendChild(sizeContainer);
 		productContainer.appendChild(priceContainer);

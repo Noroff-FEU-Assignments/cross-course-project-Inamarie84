@@ -180,6 +180,15 @@ header .nav .links a:hover {
 
 /* Men - Women */
 
+.tag {
+  background-color: lightgreen;
+  color: black;
+  font-style: italic;
+  border-radius: 5px;
+  padding: 5px;
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+}
+
 .size-box {
   display: inline-block;
   width: 30px;
