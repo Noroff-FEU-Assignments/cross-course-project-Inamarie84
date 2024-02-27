@@ -33,7 +33,7 @@ const cartContainer = document.createElement("div");
 cartContainer.classList.add("product");
 
 // Create title element
-const titleContainer = document.createElement("h3");
+const titleContainer = document.createElement("h2");
 titleContainer.textContent = title;
 titleContainer.classList.add("product");
 

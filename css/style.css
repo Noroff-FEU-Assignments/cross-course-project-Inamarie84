@@ -181,9 +181,12 @@ header .nav .links a:hover {
 /* Men - Women */
 
 .tag {
+  position: absolute;
   background-color: lightgreen;
   color: black;
   font-style: italic;
+  top: 0;
+  left: 0;
   border-radius: 5px;
   padding: 5px;
   box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
@@ -249,11 +252,15 @@ header .nav .links a:hover {
   background-color: var(--color-product);
   border-radius: 5px;
   min-height: 80%;
+  max-width: 100%;
 }
 
 .product:hover {
-  border: 2px solid black;
   box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+}
+
+.image-container {
+  position: relative;
 }
 
 /* .product img {
