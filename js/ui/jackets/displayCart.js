@@ -3,6 +3,7 @@ import * as storage from "../../helpers/storage/index.js";
 export function displayCart(cartItems) {
     const cart = storage.getCart();
     const container = document.querySelector("#cart-container");
+    container.innerHTML = " ";
 
     if (cart.length === 0) {
         container.innerHTML = "<p>You have no jackets in your cart</p>";
@@ -26,7 +27,7 @@ export function displayCart(cartItems) {
 
 function createcartItem(item) {
 
-    const { title, price, size, image } = item;
+    const { title, price, size, image, id, quantity } = item;
 
 // Create container div
 const cartContainer = document.createElement("div");
@@ -93,12 +94,23 @@ continueShoppingButton.textContent = "Continue Shopping";
 // Append continue shopping button to container
 cartContainer.appendChild(continueShoppingButton);
 
+const quantityContainer = document.createElement("p");
+quantityContainer.textContent = `Quantity: ${quantity}`;
+
 // Create remove button
 const removeButton = document.createElement("button");
 removeButton.classList.add("remove");
 removeButton.textContent = "Remove from cart";
+removeButton.dataset.id = id;
+
+removeButton.addEventListener("click", (event) => {
+    const {id} = event.target.dataset;
+    storage.removeItemFromCart(id);
+    displayCart();
+});
 
 // Append remove button to container
+cartContainer.appendChild(quantityContainer);
 cartContainer.appendChild(removeButton);
 
 return cartContainer;
