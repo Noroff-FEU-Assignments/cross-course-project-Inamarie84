@@ -1,22 +1,22 @@
 // updateCartCount.js
-export function updateCartCount() {
+// export function updateCartCount() {
   
-    const cartItemCount = getCartItemCount(); 
+//     const cartItemCount = getCartItemCount(); 
   
-    const cartItemCountElement = document.getElementById('cartItemCount');
-    if (cartItemCountElement) {
-      cartItemCountElement.textContent = cartItemCount.toString();
-    }
-  }
+//     const cartItemCountElement = document.getElementById('cartItemCount');
+//     if (cartItemCountElement) {
+//       cartItemCountElement.textContent = cartItemCount.toString();
+//     }
+//   }
   
-  function getCartItemCount() {
+//   function getCartItemCount() {
 
-    const cart = JSON.parse(localStorage.getItem("cart")) || [];
-    return cart.length;
-  }
+//     const cart = JSON.parse(localStorage.getItem("cart")) || [];
+//     return cart.length;
+//   }
 
-export function updateCart() {
-    const cart = JSON.parse(localStorage.getItem("cart")) || [];
-    updateCartCount(cart.length);
-  }
+// export function updateCart() {
+//     const cart = JSON.parse(localStorage.getItem("cart")) || [];
+//     updateCartCount(cart.length);
+//   }
   

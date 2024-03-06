@@ -1,4 +1,5 @@
 import * as storage from "../../helpers/storage/index.js";
+import { displayCartTotal } from "./displayCartTotal.js";
 
 export function displayCart(cartItems) {
     const cart = storage.getCart();
@@ -20,6 +21,8 @@ export function displayCart(cartItems) {
     } else {
         const itemHtml = cart.map(item => createcartItem(item));
         container.append(...itemHtml);
+
+        displayCartTotal();
     }
 
     // const totalPrice = cart.reduce((total, item) => total + parseFloat(item.price), 0);

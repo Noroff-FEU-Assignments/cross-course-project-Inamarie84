@@ -33,3 +33,11 @@ export function addItemToCart(item) {
     saveCart(cart); 
    }
 }
+
+export function getTotal() {
+    const cart = getCart();
+
+    return cart.reduce((acc, item) => {
+        return acc + item.price * item.quantity;
+    }, 0);
+}
