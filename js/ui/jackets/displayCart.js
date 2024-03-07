@@ -1,5 +1,6 @@
 import * as storage from "../../helpers/storage/index.js";
 import { displayCartTotal } from "./displayCartTotal.js";
+import { displayItemCount } from "./displayItemCount.js";
 
 export function displayCart(cartItems) {
     const cart = storage.getCart();
@@ -110,6 +111,7 @@ removeButton.addEventListener("click", (event) => {
     const {id} = event.target.dataset;
     storage.removeItemFromCart(id);
     displayCart();
+    displayItemCount();
 });
 
 // Append remove button to container

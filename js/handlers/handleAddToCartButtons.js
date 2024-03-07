@@ -1,4 +1,5 @@
 import * as storage from "../helpers/storage/index.js";
+import { displayItemCount } from "../ui/jackets/displayItemCount.js"
 
 export function handleAddToCartButtons() {
     const buttons = document.querySelectorAll('[data-action="add-to-cart"]');
@@ -13,9 +14,8 @@ function handleCartClick(event) {
     const { id, title, price, image } = event.target.dataset;
     const item = { id, title, price, image };
 
-    // console.log(item);
-
     storage.addItemToCart(item);
+    displayItemCount();
 
     // const cart = storage.getCart();
     // cart.push(item);

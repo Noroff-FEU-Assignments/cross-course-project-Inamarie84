@@ -41,3 +41,10 @@ export function getTotal() {
         return acc + item.price * item.quantity;
     }, 0);
 }
+
+export function getItemCount() {
+    const cart = getCart();
+    return cart.reduce((acc, item) => {
+        return acc + item.quantity;
+    }, 0);
+}
