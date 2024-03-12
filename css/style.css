@@ -241,6 +241,7 @@ header .nav .links a:hover {
 }
 
 .product {
+  display: grid;
   background-color: var(--color-product);
   border-radius: 5px;
   min-height: 80%;
@@ -276,7 +277,7 @@ header .nav .links a:hover {
 .product p,
 .products {
   font-size: 16px;
-  margin: 25px;
+  margin: 5px;
 }
 
 .on-sale {
@@ -600,6 +601,7 @@ hr {
 
 /* Buttons */
 
+
 .cta {
   /* main buttons */
   border: none;
@@ -633,7 +635,8 @@ hr {
 
 .remove {
   display: block;
-  margin: 10px auto;
+  margin: 0px auto 10px;
+
 
 }
 
@@ -762,6 +765,7 @@ hr {
 #product-container p {
   margin: 20px 40px;
 }
+
 
 
 /* --------------- Footer--------------- */
