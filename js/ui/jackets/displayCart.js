@@ -75,6 +75,11 @@ sizeContainer.textContent = `Size: ${size}`;
 // Append size div to container
 cartContainer.appendChild(sizeContainer);
 
+const quantityContainer = document.createElement("p");
+quantityContainer.textContent = `Quantity: ${quantity}`;
+
+cartContainer.appendChild(quantityContainer);
+
 // Create checkout button
 const checkoutButton = document.createElement("button");
 checkoutButton.classList.add("checkout-cta");
@@ -98,8 +103,7 @@ continueShoppingButton.textContent = "Continue Shopping";
 // Append continue shopping button to container
 cartContainer.appendChild(continueShoppingButton);
 
-const quantityContainer = document.createElement("p");
-quantityContainer.textContent = `Quantity: ${quantity}`;
+
 
 
 // Create remove button
@@ -116,7 +120,7 @@ removeButton.addEventListener("click", (event) => {
 });
 
 // Append remove button to container
-cartContainer.appendChild(quantityContainer);
+
 cartContainer.appendChild(removeButton);
 
 return cartContainer;

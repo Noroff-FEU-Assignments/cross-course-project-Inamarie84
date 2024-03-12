@@ -86,15 +86,22 @@ export function displayJackets(items, container) {
 		viewDetailsLink.classList.add("view");
 		viewDetailsLink.textContent = "View details";
 
+		const buttonsContainer = document.createElement("div");
+        buttonsContainer.classList.add("buttons");
+        buttonsContainer.appendChild(addToCartButton);
+        buttonsContainer.appendChild(checkoutButton);
+        buttonsContainer.appendChild(viewDetailsLink);
+
 		productContainer.appendChild(imageContainer);
         productContainer.appendChild(titleElement);
 		productContainer.appendChild(descriptionElement);
 		productContainer.appendChild(sizeContainer);
 		productContainer.appendChild(priceContainer);
 		productContainer.appendChild(onSaleElement);
-		productContainer.appendChild(addToCartButton);
-		productContainer.appendChild(checkoutButton);
-		productContainer.appendChild(viewDetailsLink);
+		productContainer.appendChild(buttonsContainer);
+		// productContainer.appendChild(addToCartButton);
+		// productContainer.appendChild(checkoutButton);
+		// productContainer.appendChild(viewDetailsLink);
 
 		container.appendChild(productContainer);
 
