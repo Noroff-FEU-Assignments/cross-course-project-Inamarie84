@@ -1,4 +1,5 @@
 import { createSizeDropdown } from "../../utils/sizedropdown.js";
+import { displayItemCount } from "./displayItemCount.js";
 
 export function displayJacket(jacket) {
 
@@ -7,6 +8,7 @@ export function displayJacket(jacket) {
     document.title = `${jacketTitle} | ${document.title}`;
   
     const container = document.querySelector("#product-container");
+    container.classList.add("product-container");
   
     container.innerHTML = "";
   
@@ -30,7 +32,7 @@ export function displayJacket(jacket) {
     const sizeDropdown = createSizeDropdown(jacketSizes);
     sizeDropdownContainer.appendChild(sizeDropdown);
   
-    const price = document.createElement("h2");
+    const price = document.createElement("h3");
     price.textContent = `$ ${jacketPrice}`;
   
     container.append(heading);
@@ -40,15 +42,21 @@ export function displayJacket(jacket) {
     container.appendChild(sizeDropdownContainer);
     container.append(price);
     
+    
     const addToCartButton = document.createElement("button");
     addToCartButton.textContent = "Add to Cart";
     addToCartButton.classList.add("add-cta");
   
     const continueShoppingLink = document.createElement("a");
     continueShoppingLink.textContent = "Continue Shopping";
-    continueShoppingLink.href = "/"; 
+    continueShoppingLink.href = "#"; 
     continueShoppingLink.classList.add("add-cta");
-  
+
+    continueShoppingLink.addEventListener("click", function(event) {
+      event.preventDefault(); // Prevent the default behavior of the anchor tag
+      history.back(); // Go back to the previous page
+     });
+
     container.appendChild(addToCartButton);
     container.appendChild(continueShoppingLink);
   }

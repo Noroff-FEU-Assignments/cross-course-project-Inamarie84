@@ -16,6 +16,6 @@ export function displayItemCount () {
     if(itemCountContainer) {
         itemCountContainer.innerText = itemCount;
     } else {
-        container.innerHTML += `<span id="item-count" class="bg-red-500 text-white rounded-full px-2 py-1 text-xs absolute -top-2 -right-2">${itemCount}</span>`;
+        container.innerHTML += `<span id="item-count" class="item-count">${itemCount}</span>`;
     }
 }

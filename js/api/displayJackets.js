@@ -2,6 +2,7 @@ import { url } from "../constants.js";
 import { displayMessage } from "../ui/shared/displayMessage.js";
 import { displayJackets } from "../ui/jackets/displayAlljackets.js";
 import { handleAddToCartButtons } from "../handlers/handleAddToCartButtons.js";
+import { displayItemCount } from "../ui/jackets/displayItemCount.js";
 // import { updateCart } from "../utils/updatecartcount.js";
 
 async function fetchAndDisplayJackets() {
@@ -26,7 +27,7 @@ async function fetchAndDisplayJackets() {
 
 		displayJackets(itemsToDisplay, container);
 		handleAddToCartButtons();
-		// updateCart();
+		displayItemCount();
 
 		const addButtons = document.querySelectorAll(".add-cta");
 

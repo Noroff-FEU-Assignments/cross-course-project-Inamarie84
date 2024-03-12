@@ -56,6 +56,18 @@ body {
   border-color: green ;
 }
 
+.item-count {
+  background-color: #ff4444; /* Red color */
+  color: #ffffff; /* White color */
+  border-radius: 9999px; /* Rounded shape */
+  padding: 2px 8px; /* Adjust padding as needed */
+  font-size: 0.75rem; /* Small font size */
+  position: absolute;
+  top: 35%;
+  right: 0.5%;
+}
+
+
 /* --------------- Header --------------- */
 /* Header */
 
@@ -190,26 +202,6 @@ header .nav .links a:hover {
   border-radius: 5px;
   padding: 5px;
   box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
-}
-
-.size-box {
-  display: inline-block;
-  width: 30px;
-  height: 30px;
-  border: 1px solid #000;
-  margin-right: 5px;
-  cursor: pointer;
-}
-
-.size-box.selected {
-  background-color: green;
-  /* Other styles for selected state */
-}
-
-
-.size-box-inner {
-  text-align: center;
-  line-height: 30px;
 }
 
 .intro-men,
@@ -406,6 +398,7 @@ textarea {
   padding: 20px;
 } */
 
+
 .detail-image {
   display: flex;
   box-sizing: border-box;
@@ -477,7 +470,7 @@ textarea {
   margin: 10px 80px;
   font-size: 24px;
 }
-.flex-container {
+/* .flex-container {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -485,7 +478,7 @@ textarea {
   background-color: var(--color-shade);
   color: var(--color-font);
   margin: 20px;
-}
+} */
 
 .sc-alternatives {
   font-size: 16px;

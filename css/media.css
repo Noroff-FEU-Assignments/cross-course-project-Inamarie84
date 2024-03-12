@@ -75,6 +75,13 @@
   .icons i {
     justify-items: center;
   }
+
+  .item-count {
+    top: 32px; /* Adjust as needed for vertical spacing */
+    right: 50px; /* Adjust as needed for horizontal spacing */
+ }
+
+
   .background {
     padding-top: 0px;
   }
@@ -167,7 +174,7 @@
     margin: 0px;
   }
 
-  .featured-products {
+  .featured-products, #product-container {
     grid-template-columns: repeat(1, minmax(0, 1fr));
     text-align: center;
   }
@@ -201,7 +208,7 @@
     margin: 10px;
   }
 
-  .featured-products .product .cta {
+  .featured-products .product .cta, #product-container {
     margin: 0px;
     padding: 1px 5px;
     margin-left: 5px;

@@ -5,9 +5,8 @@ export function displayCartTotal() {
     const container = document.querySelector("#cart-container");
 
     const totalDiv = document.createElement("div");
-    totalDiv.classList.add("bg-gray-100");
-    totalDiv.classList.add("p-4");
-    totalDiv.classList.add("rounded");
+    totalDiv.classList.add("product");
+
     totalDiv.textContent = `Total: ${total}`;
 
     container.appendChild(totalDiv);

@@ -101,6 +101,7 @@ cartContainer.appendChild(continueShoppingButton);
 const quantityContainer = document.createElement("p");
 quantityContainer.textContent = `Quantity: ${quantity}`;
 
+
 // Create remove button
 const removeButton = document.createElement("button");
 removeButton.classList.add("remove");
