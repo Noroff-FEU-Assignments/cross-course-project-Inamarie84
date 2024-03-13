@@ -5,7 +5,7 @@ export function displayCartTotal() {
     const container = document.querySelector("#cart-container");
 
     const totalDiv = document.createElement("div");
-    totalDiv.classList.add("product");
+    totalDiv.classList.add("producttotal");
 
     totalDiv.textContent = `Total: ${total}`;
 

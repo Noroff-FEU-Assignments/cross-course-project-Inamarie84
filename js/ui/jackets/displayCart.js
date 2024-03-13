@@ -35,7 +35,7 @@ function createcartItem(item) {
 
 // Create container div
 const cartContainer = document.createElement("div");
-cartContainer.classList.add("product");
+cartContainer.classList.add("cart-product");
 
 // Create title element
 const titleContainer = document.createElement("h2");
@@ -102,9 +102,6 @@ continueShoppingButton.textContent = "Continue Shopping";
 
 // Append continue shopping button to container
 cartContainer.appendChild(continueShoppingButton);
-
-
-
 
 // Create remove button
 const removeButton = document.createElement("button");

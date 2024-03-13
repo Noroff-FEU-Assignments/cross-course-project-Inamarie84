@@ -240,12 +240,16 @@ header .nav .links a:hover {
   margin: 25px;
 }
 
-.product {
+.product, .cart-product {
   display: grid;
   background-color: var(--color-product);
   border-radius: 5px;
   min-height: 80%;
   max-width: 100%;
+}
+
+.cart-product {
+  text-align: center;
 }
 
 .product:hover {
@@ -276,8 +280,9 @@ header .nav .links a:hover {
 .product h2,
 .product p,
 .products {
+  text-align: ;
   font-size: 16px;
-  margin: 5px;
+  margin: 10px 25px;
 }
 
 .on-sale {
@@ -455,12 +460,22 @@ textarea {
 
 /* Checkout-shopping cart */
 
+.producttotal {
+  background-color: var(--color-background);
+  color: var(--color-font);
+  max-width: 100%;
+  padding: 10px 20px;
+  margin: 20px auto;
+  text-align: center;
+  text-decoration: underline;
+}
+
 .shopping-cart h1 {
   font-size: 30px;
   text-transform: uppercase;
 }
 
-.cart-container, #product-container {
+.cart-container, .product-container {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -471,6 +486,8 @@ textarea {
   margin: 10px 80px;
   font-size: 24px;
 }
+
+
 /* .flex-container {
   display: flex;
   justify-content: center;
@@ -636,15 +653,19 @@ hr {
 .remove {
   display: block;
   margin: 0px auto 10px;
-
-
+  padding: 10px 20px;
+  text-transform: uppercase;
+  background-color: var(--color-main);
+  border-radius: 5px;
+  color: var(--color-font);
+  cursor: pointer;
 }
 
 .add-cta, .checkout-cta {
   display: block;
   position: relative;
   text-align: center;
-  margin: 20px auto;
+  margin: 15px auto;
   border: none;
   padding: 10px 20px;
   border-radius: 5px;
@@ -665,7 +686,8 @@ hr {
 
 .cta:hover, 
 .add-cta:hover, 
-.checkout-cta:hover {
+.checkout-cta:hover,
+.remove:hover {
   /* main buttons hover */
   background-color: #C1BEBA;
 }

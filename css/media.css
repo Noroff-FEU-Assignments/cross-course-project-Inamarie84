@@ -174,7 +174,7 @@
     margin: 0px;
   }
 
-  .featured-products, #product-container {
+  .featured-products {
     grid-template-columns: repeat(1, minmax(0, 1fr));
     text-align: center;
   }
@@ -208,7 +208,7 @@
     margin: 10px;
   }
 
-  .featured-products .product .cta, #product-container {
+  .featured-products .product .cta {
     margin: 0px;
     padding: 1px 5px;
     margin-left: 5px;
