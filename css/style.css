@@ -11,6 +11,7 @@
   --color-active: #e0ddd9;
   --color-product: #f2f2f0;
   --color-footer: #000000;
+  --color-shopping: #7DCC85;
 }
 
 /*global*/
@@ -670,7 +671,7 @@ hr {
   padding: 10px 20px;
   border-radius: 5px;
   color: var(--color-product);
-  background-color: var(--color-theme);
+  background-color: var(--color-shopping);
   font-size: 14px;
   text-decoration: none;
   text-transform: uppercase;

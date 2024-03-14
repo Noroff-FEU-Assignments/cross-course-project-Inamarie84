@@ -12,7 +12,7 @@ export function displayCart(cartItems) {
     
         const goShoppingButton = document.createElement('button');
         goShoppingButton.textContent = 'Go Shopping';
-        goShoppingButton.classList.add('cta');
+        goShoppingButton.classList.add('add-cta');
         goShoppingButton.addEventListener('click', function () {
             window.location.href = '/';
         });
