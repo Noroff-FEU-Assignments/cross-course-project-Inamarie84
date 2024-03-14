@@ -705,7 +705,7 @@ hr {
   display: flex;
   justify-content: center;
   text-transform: uppercase;
-  background-color: var(--color-theme);
+  background-color: var(--color-shopping);
   color: var(--color-main);
   margin: 10px auto 30px;
   padding: 12px 100px;
