@@ -40,7 +40,7 @@ cartContainer.classList.add("cart-product");
 // Create title element
 const titleContainer = document.createElement("h2");
 titleContainer.textContent = title;
-titleContainer.classList.add("product");
+titleContainer.classList.add("h2");
 
 // Append title to container
 cartContainer.appendChild(titleContainer);

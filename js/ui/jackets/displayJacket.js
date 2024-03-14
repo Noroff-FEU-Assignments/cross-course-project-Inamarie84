@@ -45,7 +45,7 @@ export function displayJacket(jacket) {
     
     const addToCartButton = document.createElement("button");
     addToCartButton.textContent = "Add to Cart";
-    addToCartButton.classList.add("add-cta");
+    addToCartButton.classList.add("add-cta", "cta-cart");
   
     const continueShoppingLink = document.createElement("a");
     continueShoppingLink.textContent = "Continue Shopping";
