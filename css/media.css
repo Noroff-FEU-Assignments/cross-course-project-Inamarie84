@@ -81,7 +81,6 @@
     right: 50px; /* Adjust as needed for horizontal spacing */
  }
 
-
   .background {
     padding-top: 0px;
   }
@@ -106,7 +105,8 @@
   .contact_h1,
   .order_h1,
   .section-sp h1,
-  .product-container h1 {
+  .product-container h1,
+  .cart-product h2 {
     font-size: 26px;
     text-align: center;
   }
@@ -122,7 +122,8 @@
   .contact-input,
   .sp,
   .order,
-  .product-container p {
+  .product-container p,
+  .price {
     font-size: 16px;
   }
 
@@ -135,6 +136,10 @@
 
   .co-success a img {
     margin: auto;
+  }
+
+  .cart-container, .product-container {
+    margin: 10px 20px;
   }
 
   /*men-women*/
@@ -197,7 +202,6 @@
 
   .cta,
   .cta-co-success,
-  .cta-sc1,
   .cta-sc2 {
     padding: 10px 30px;
     font-size: 12px;

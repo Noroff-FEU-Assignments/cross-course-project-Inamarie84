@@ -480,6 +480,7 @@ textarea {
   display: flex;
   justify-content: center;
   align-items: center;
+  text-align: center;
   flex-direction: column;
   background-color: var(--color-background);
   color: var(--color-font);
@@ -742,7 +743,6 @@ hr {
 }
 
 .cta-co-success,
-.cta-sc1,
 .cta-sc2 {
   /* buttons for checkoutsuccess */
   font-size: 16px;
@@ -770,8 +770,7 @@ hr {
   margin-top: 3px;
 }
 
-.cta-co-success:hover,
-.cta-sc1:hover {
+.cta-co-success:hover {
   /* buttons for checkoutsuccess, shopping cart hover */
   background-color: #C1BEBA;
 }
@@ -781,7 +780,6 @@ hr {
   background-color: #60b867;
 }
 
-.cta-sc1,
 .cta-sc2 {
   /*shopping cart*/
   margin: 12px auto;
