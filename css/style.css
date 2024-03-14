@@ -11,7 +11,7 @@
   --color-active: #e0ddd9;
   --color-product: #f2f2f0;
   --color-footer: #000000;
-  --color-shopping: #7DC084;
+  --color-shopping: #393d40;
 }
 
 /*global*/
@@ -670,7 +670,7 @@ hr {
   border: none;
   padding: 10px 20px;
   border-radius: 5px;
-  color: var(--color-product);
+  color: var(--color-main);
   background-color: var(--color-shopping);
   font-size: 14px;
   text-decoration: none;
@@ -680,8 +680,8 @@ hr {
 }
 
 .checkout-cta {
-  background-color: white;
-  color: black;
+  background-color: var(--color-main);
+  color: var(--color-font);
   text-decoration: none;
 }
 
