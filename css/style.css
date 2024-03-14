@@ -246,7 +246,7 @@ header .nav .links a:hover {
   background-color: var(--color-product);
   border-radius: 5px;
   min-height: 80%;
-  max-width: 100%;
+  max-width: 500px;
 }
 
 .cart-product {
@@ -619,7 +619,6 @@ hr {
 
 /* Buttons */
 
-
 .cta {
   /* main buttons */
   border: none;
@@ -656,14 +655,21 @@ hr {
   margin: 0px auto 10px;
   padding: 10px 20px;
   text-transform: uppercase;
-  background-color: var(--color-main);
+  font-size: 12px;
+  background-color: lightgrey;
   border-radius: 5px;
+  border: none;
   color: var(--color-font);
   cursor: pointer;
 }
 
+.icon {
+  margin: auto 0px auto 5px;
+}
+
 .add-cta, .checkout-cta {
   display: block;
+  text-decoration: none;
   position: relative;
   text-align: center;
   margin: 15px auto;
@@ -679,10 +685,19 @@ hr {
   width: 180px;
 }
 
-.checkout-cta {
+.checkout-cta, .checkout-cta a {
   background-color: var(--color-main);
   color: var(--color-font);
   text-decoration: none;
+  margin-bottom: 5px;
+}
+
+.cta-cart {
+  width: 220px;
+}
+
+.ctacart {
+  width: 260px;
 }
 
 .cta:hover, 
@@ -703,6 +718,7 @@ hr {
 .cta-co_submit {
   /* buttons for contactform */
   display: flex;
+  border: none;
   justify-content: center;
   text-transform: uppercase;
   background-color: var(--color-shopping);
@@ -716,7 +732,7 @@ hr {
 .cta-submit:hover,
 .cta-co_submit:hover {
   /* buttons for contactform */
-  background-color: #154754;
+  background-color:#C1BEBA;
 }
 
 .size-select:hover {
@@ -733,7 +749,7 @@ hr {
   display: flex;
   justify-content: center;
   text-transform: uppercase;
-  background-color: #d81d1d;
+  background-color: var(--color-shopping);
   color: var(--color-main);
   margin: 60px auto 40px;
   padding: 15px 100px;
@@ -741,6 +757,11 @@ hr {
   cursor: pointer;
   white-space: nowrap;
   text-decoration: none;
+}
+
+.cta-co-success {
+  background-color: var(--color-main);
+  color: var(--color-font);
 }
 
 .cta-co_submit {
@@ -752,7 +773,7 @@ hr {
 .cta-co-success:hover,
 .cta-sc1:hover {
   /* buttons for checkoutsuccess, shopping cart hover */
-  background-color: #a00c0c;
+  background-color: #C1BEBA;
 }
 
 .cta-sc2:hover {

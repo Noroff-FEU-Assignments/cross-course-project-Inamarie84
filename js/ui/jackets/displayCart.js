@@ -82,7 +82,7 @@ cartContainer.appendChild(quantityContainer);
 
 // Create checkout button
 const checkoutButton = document.createElement("button");
-checkoutButton.classList.add("checkout-cta");
+checkoutButton.classList.add("checkout-cta", "ctacart");
 
 // Create checkout link
 const checkoutLink = document.createElement("a");
@@ -95,18 +95,30 @@ checkoutButton.appendChild(checkoutLink);
 // Append checkout button to container
 cartContainer.appendChild(checkoutButton);
 
-// Create continue shopping button
-const continueShoppingButton = document.createElement("button");
-continueShoppingButton.classList.add("add-cta");
-continueShoppingButton.textContent = "Continue Shopping";
+const continueShoppingLink = document.createElement("a");
+continueShoppingLink.textContent = "Continue Shopping";
+continueShoppingLink.href = "#"; 
+continueShoppingLink.classList.add("add-cta", "cta-cart");
+
+continueShoppingLink.addEventListener("click", function(event) {
+    event.preventDefault(); // Prevent the default behavior of the anchor tag
+    history.back(); // Go back to the previous page
+  });
 
 // Append continue shopping button to container
-cartContainer.appendChild(continueShoppingButton);
+cartContainer.appendChild(continueShoppingLink);
 
 // Create remove button
 const removeButton = document.createElement("button");
 removeButton.classList.add("remove");
+
+const icon = document.createElement("i");
+icon.classList.add("fa-solid", "fa-trash-can", "icon");
+
 removeButton.textContent = "Remove from cart";
+
+removeButton.appendChild(icon);
+
 removeButton.dataset.id = id;
 
 removeButton.addEventListener("click", (event) => {
