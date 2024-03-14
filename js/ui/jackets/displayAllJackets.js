@@ -57,7 +57,7 @@ export function displayJackets(items, container) {
 		const priceValue = isOnSale ? `$${item.discountedPrice.toFixed(2)}` : `$${item.price.toFixed(2)}`;
 
 		const priceElement = document.createElement("span");
-		priceElement.style.color = isOnSale ? "red" : "inherit";
+		priceElement.style.color = isOnSale ? "#D81D1D" : "inherit";
 		priceElement.style.textDecoration = isOnSale ? "line-through" : "none";
 		priceElement.textContent = priceValue;
 
@@ -99,9 +99,6 @@ export function displayJackets(items, container) {
 		productContainer.appendChild(priceContainer);
 		productContainer.appendChild(onSaleElement);
 		productContainer.appendChild(buttonsContainer);
-		// productContainer.appendChild(addToCartButton);
-		// productContainer.appendChild(checkoutButton);
-		// productContainer.appendChild(viewDetailsLink);
 
 		container.appendChild(productContainer);
 
