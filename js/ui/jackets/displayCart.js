@@ -70,7 +70,10 @@ cartContainer.appendChild(priceContainer);
 // Create size div
 const sizeContainer = document.createElement("div");
 sizeContainer.classList.add("products");
-sizeContainer.textContent = `Size: ${size}`;
+
+// Check if size is undefined or not selected
+const selectedSize = item.size || "XS"; // Default to 'XS' if size is undefined
+sizeContainer.textContent = `Size: ${selectedSize}`;
 
 // Append size div to container
 cartContainer.appendChild(sizeContainer);
