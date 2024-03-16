@@ -67,13 +67,15 @@ priceContainer.appendChild(priceParagraph);
 // Append price div to container
 cartContainer.appendChild(priceContainer);
 
+
 // Create size div
 const sizeContainer = document.createElement("div");
 sizeContainer.classList.add("products");
 
 // Check if size is undefined or not selected
 const selectedSize = item.size || "XS"; // Default to 'XS' if size is undefined
-sizeContainer.textContent = `Size: ${selectedSize}`;
+const sizeText = document.createTextNode(`Size: ${selectedSize}`);
+sizeContainer.appendChild(sizeText);
 
 // Append size div to container
 cartContainer.appendChild(sizeContainer);
