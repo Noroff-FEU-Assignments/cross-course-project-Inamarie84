@@ -16,9 +16,5 @@ function handleCartClick(event) {
 
     storage.addItemToCart(item);
     displayItemCount();
-
-    // const cart = storage.getCart();
-    // cart.push(item);
-    // storage.saveCart(cart);
 }
 

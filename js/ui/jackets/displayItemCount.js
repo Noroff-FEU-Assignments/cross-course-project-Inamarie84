@@ -19,3 +19,4 @@ export function displayItemCount () {
         container.innerHTML += `<span id="item-count" class="item-count">${itemCount}</span>`;
     }
 }
+

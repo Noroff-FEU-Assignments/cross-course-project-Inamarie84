@@ -1,5 +1,4 @@
 import { createSizeDropdown } from "../../utils/sizedropdown.js";
-import { displayItemCount } from "./displayItemCount.js";
 
 export function displayJacket(jacket) {
 
@@ -63,3 +62,7 @@ export function displayJacket(jacket) {
 
   
   
+
+  
+
+

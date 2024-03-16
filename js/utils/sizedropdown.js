@@ -1,6 +1,7 @@
+
 export function createSizeDropdown(sizes) {
     const sizeDropdown = document.createElement("select");
-    sizeDropdown.classList.add("size-dropdown");
+    sizeDropdown.setAttribute("id", "size-dropdown"); // Set the ID of the size dropdown
 
     // Add option for the default size ('xs')
     const defaultOption = document.createElement("option");
