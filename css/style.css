@@ -769,11 +769,6 @@ hr {
   text-decoration: none;
 }
 
-.cta-co-success {
-  background-color: var(--color-main);
-  color: var(--color-font);
-}
-
 .cta-co_submit {
   /* buttons for checkoutsuccess */
   padding: 10px 40px;
