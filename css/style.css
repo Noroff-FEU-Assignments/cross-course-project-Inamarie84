@@ -650,7 +650,7 @@ hr {
   margin: 20px auto;
   background-color: var(--color-main);
   padding: 5px 10px;
-  margin: 10px auto;
+  margin: 10px auto 20px;
   border-radius: 5px;
   width: 160px;
 }
