@@ -4,12 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="descripton" content="Homepage of Rainy Days Jackets - pushing the comfort zone">
-    <title>Rainy Days | Home</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inria+Sans&family=Roboto&display=swap" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
+    <meta name="descripton" content="View our top-seller - Men's Seven J Rain Jacket">
+    <title>Rainy Days | Products</title>
+    <link href="../css/style.css" rel="stylesheet">
     <link href="../css/media.css" rel="stylesheet">
     <script src="https://kit.fontawesome.com/eb56cff7a8.js" crossorigin="anonymous"></script>
     <!-- Hotjar Tracking Code for my site -->
@@ -27,24 +24,28 @@
   <body>
     <header>
       <a href="/index.html"><img src="../images/RainyDays_Logo.png" alt="Logo of RainyDays.com" class="logo"></a>
-      <input type="checkbox" id="menu-checkbox">
-      <div class="nav">
-        <nav class="links">
-          <a href="index.html" class="active">Home</a>
-          <a href="/malejackets.html">Men</a>
-          <a href="/femalejackets.html">Women</a>
-          <a href="/about.html">About</a>
-          <a href="/contact.html">Contact</a>
-        </nav>
+        <input type="checkbox" id="menu-checkbox">
+          <div class="nav">
+            <nav class="links">
+              <a href="/index.html">Home</a>
+              <a href="/malejackets.html">Men</a>
+              <a href="/femalejackets.html">Women</a>
+              <a href="/about.html">About</a>
+              <a href="/contact.html">Contact</a>
+            </nav>
+          </div>
+        <div class="icons">
+          <i class="fa-solid fa-regular fa-heart"></i>
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <a href="/checkout.html" class="cart" title="Shopping Cart"><i class="fa-solid fa-cart-shopping"></i><span id="cartItemCount">0</span></a>
+          <label for="menu-checkbox" class="hamburger-menu"><i class="fas fa-bars fa-xl"></i><span class="hidden">Menu</span></label>
       </div>
-      <div class="icons">
-        <i class="fa-solid fa-regular fa-heart"></i>
-        <i class="fa-solid fa-magnifying-glass"></i>
-        <a href="/checkout.html" class="cart" title="Shopping Cart"><i class="fa-solid fa-cart-shopping"></i><span id="cartItemCount">0</span></a>
-        <label for="menu-checkbox" class="hamburger-menu"><i class="fas fa-bars fa-xl"></i><span class="hidden">Menu</span></label>
-      </div>
-    </header>
-    
+    </header>  
+    <div id="message"> 
+    <div id="product-container">
+    <div class="loading">Loading...<i class="fas fa-solid fa-spinner spinner"></i></div>
+  </div>
+   
     <footer>
       <p>2022 Rainydays, inc &copy;</p>
       <p>Free Shipping | Free returns</p>
@@ -56,6 +57,6 @@
         <i class="fa-brands fa-facebook"></i>
       </p>
     </footer>
-    <script src="js/script.js" type="module"></script>
+    <script src="/js/api/viewproductdetails.js" type="module"></script>
   </body>
 </html>

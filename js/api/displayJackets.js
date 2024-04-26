@@ -9,7 +9,7 @@ async function fetchAndDisplayJackets() {
 	const path = location.pathname;
 	console.log(path);
 
-	const gender = path === "/pages/malejackets.html" ? "Male" : "Female";
+	const gender = path === "/malejackets.html" ? "Male" : "Female";
 	console.log(gender);
 
 	try {

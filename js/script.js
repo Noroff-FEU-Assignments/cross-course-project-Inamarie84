@@ -27,7 +27,7 @@ ctaButtonsDiv.classList.add("cta-buttons");
 
 const menLinkDiv = document.createElement("div");
 const menLink = document.createElement("a");
-menLink.href = "/pages/malejackets.html";
+menLink.href = "/malejackets.html";
 menLink.classList.add("cta");
 menLink.textContent = "Shop Men's";
 menLinkDiv.appendChild(menLink);
@@ -35,7 +35,7 @@ ctaButtonsDiv.appendChild(menLinkDiv);
 
 const womenLinkDiv = document.createElement("div");
 const womenLink = document.createElement("a");
-womenLink.href = "/pages/femalejackets.html";
+womenLink.href = "/femalejackets.html";
 womenLink.classList.add("cta");
 womenLink.textContent = "Shop Women's";
 womenLinkDiv.appendChild(womenLink);

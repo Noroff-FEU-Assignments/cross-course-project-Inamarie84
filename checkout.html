@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="descripton" content="View our top-seller - Men's Seven J Rain Jacket">
-    <title>Rainy Days | Products</title>
+    <meta name="descripton" content="Your Rainy Days shopping cart">
+    <title>Rainy Days | Checkout</title>
     <link href="../css/style.css" rel="stylesheet">
     <link href="../css/media.css" rel="stylesheet">
     <script src="https://kit.fontawesome.com/eb56cff7a8.js" crossorigin="anonymous"></script>
@@ -24,28 +24,28 @@
   <body>
     <header>
       <a href="/index.html"><img src="../images/RainyDays_Logo.png" alt="Logo of RainyDays.com" class="logo"></a>
-        <input type="checkbox" id="menu-checkbox">
-          <div class="nav">
-            <nav class="links">
-              <a href="/index.html">Home</a>
-              <a href="/pages/malejackets.html">Men</a>
-              <a href="/pages/femalejackets.html">Women</a>
-              <a href="/pages/about.html">About</a>
-              <a href="/pages/contact.html">Contact</a>
-            </nav>
-          </div>
-        <div class="icons">
-          <i class="fa-solid fa-regular fa-heart"></i>
-          <i class="fa-solid fa-magnifying-glass"></i>
-          <a href="/pages/checkout.html" class="cart" title="Shopping Cart"><i class="fa-solid fa-cart-shopping"></i><span id="cartItemCount">0</span></a>
-          <label for="menu-checkbox" class="hamburger-menu"><i class="fas fa-bars fa-xl"></i><span class="hidden">Menu</span></label>
+      <input type="checkbox" id="menu-checkbox">
+      <div class="nav">
+        <nav class="links">
+          <a href="/index.html">Home</a>
+          <a href="/malejackets.html">Men</a>
+          <a href="/femalejackets.html">Women</a>
+          <a href="/about.html">About</a>
+          <a href="/contact.html">Contact</a>
+        </nav>
       </div>
-    </header>  
-    <div id="message"> 
-    <div id="product-container">
-    <div class="loading">Loading...<i class="fas fa-solid fa-spinner spinner"></i></div>
-  </div>
-   
+      <div class="icons">
+        <i class="fa-solid fa-regular fa-heart"></i>
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <a href="/checkout.html" class="cart" title="Shopping Cart"><i class="fa-solid fa-cart-plus"></i><span id="cartItemCount">0</span></a>
+        <label for="menu-checkbox" class="hamburger-menu"><i class="fas fa-bars fa-xl"></i><span class="hidden">Menu</span></label>
+      </div>
+    </header>
+    <main class="background">
+      <section id="cart-container" class="cart-container">
+  
+      </section>
+    </main>
     <footer>
       <p>2022 Rainydays, inc &copy;</p>
       <p>Free Shipping | Free returns</p>
@@ -57,6 +57,6 @@
         <i class="fa-brands fa-facebook"></i>
       </p>
     </footer>
-    <script src="/js/api/viewproductdetails.js" type="module"></script>
+    <script src="/js/checkout.js" type="module"></script>
   </body>
 </html>

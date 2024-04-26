@@ -8,7 +8,7 @@ function router() {
         case "/index.html";
         console.log("home page");
         break;
-        case "/pages/SpecificProduct.html";
+        case "/SpecificProduct.html";
         console.log("product page");
         break;
     }
