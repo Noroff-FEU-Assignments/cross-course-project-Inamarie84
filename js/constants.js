@@ -1,1 +1,1 @@
-export const url = "https://api.noroff.dev/api/v1/rainy-days";
+export const BASE_URL = "https://cors.noroff.dev/https://inaforseth.no/cms/wp-json/wc/store/products";
