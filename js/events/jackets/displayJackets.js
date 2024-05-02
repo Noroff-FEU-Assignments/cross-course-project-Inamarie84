@@ -4,7 +4,7 @@ import { displayMessage } from "../../ui/shared/displayMessage.js";
 import { renderProductThumbnails } from "../../ui/products/renderProductThumbnails.js";
 import { renderProducts } from "../../ui/products/renderProducts.js";
 
-export async function displayProducts() {
+export async function displayJackets() {
   console.log("displayProducts");
   try {
     const products = await fetchJackets();

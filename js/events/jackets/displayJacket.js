@@ -1,8 +1,8 @@
-import { fetchProduct } from "../../api/fetchJacket.js";
-import { displayMessage } from "../../ui/shared/displayMessage"
+import { fetchJacket } from "../../api/fetchJacket.js";
+import { displayMessage } from "../../ui/shared/displayMessage.js"
 import { renderProduct } from "../../ui/products/renderProduct.js";
 
-export async function displayProduct() {
+export async function displayJacket() {
   // get id from the query string
   const search = window.location.search;
   const params = new URLSearchParams(search);
@@ -13,7 +13,7 @@ export async function displayProduct() {
   }
 
   try {
-    const product = await fetchProduct(id);
+    const product = await fetchJacket(id);
     console.log(product);
     renderProduct("#product-container", product);
   } catch (error) {
