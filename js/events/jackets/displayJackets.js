@@ -6,7 +6,7 @@ import { renderProducts } from "../../ui/products/renderProducts.js";
 
 
 export async function displayJackets() {
-  console.log("displayProducts");
+  console.log("displayJackets");
   try {
     const products = await fetchJackets();
     console.log(products);
@@ -18,8 +18,7 @@ export async function displayJackets() {
     // console.error(error);
     displayMessage(
       "error",
-      "There was an error fetching the products",
-      "message"
+      "Ooops...There was an error fetching the jackets"
     );
   }
 }
