@@ -14,7 +14,7 @@ export function renderProducts(targetElement, products) {
       const { name, id } = product;
       const productItem = document.createElement("a");
       productItem.classList.add("product");
-      productItem.setAttribute("href", `viewproductdetails.html?id=${id}`);
+      productItem.setAttribute("href", `product.html?id=${id}`);
       const title = document.createElement("h4");
       title.innerText = name;
       productItem.appendChild(title);

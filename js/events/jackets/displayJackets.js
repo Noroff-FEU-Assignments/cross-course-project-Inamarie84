@@ -17,9 +17,9 @@ export async function displayJackets() {
     // display error to the user
     // console.error(error);
     displayMessage(
-      "#products-container",
       "error",
-      "There was an error fetching the products"
+      "There was an error fetching the products",
+      "message"
     );
   }
 }
@@ -105,7 +105,7 @@ export async function displayJackets() {
 //         checkoutButton.textContent = "Checkout";
 
 //         const viewDetailsLink = document.createElement("a");
-//         viewDetailsLink.href = `viewproductdetails.html?id=${item.id}`;
+//         viewDetailsLink.href = `product.html?id=${item.id}`;
 //         viewDetailsLink.classList.add("view");
 //         viewDetailsLink.textContent = "View details";
 

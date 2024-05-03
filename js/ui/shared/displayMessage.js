@@ -3,14 +3,16 @@
 //     element.innerHTML = `<div class="message ${messageType}">${message}</div>`;
 //   }
 
-  export function displayMessage(messageType, message) {
-    const element = document.querySelector("#message");
+export function displayMessage(messageType, message, targetElement = "#message") {
+    const element = document.querySelector(targetElement);
     if (element) {
         element.innerHTML = `<div class="message ${messageType}">${message}</div>`;
     } else {
-        console.error("Element with ID 'message' not found in the DOM.");
+        console.error(`Element with ID '${targetElement}' not found in the DOM.`);
     }
 }
+
+
 
 // export function displayMessage(container = "#message", message = "There was an unexpected error", messageType = "error") {
 //     let parent = container;

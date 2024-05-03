@@ -6,7 +6,7 @@ const { pathname } = location;
 console.log(pathname);
 
 switch (pathname) {
-  case "/viewproductdetails.html":
+  case "/product.html":
     displayJacket();
     break;
   case "/femalejackets.html":
@@ -29,7 +29,7 @@ switch (pathname) {
 //         case "/index.html";
 //         console.log("home page");
 //         break;
-//         case "/viewproductdetails.html";
+//         case "/product.html";
 //         console.log("product page");
 //         break;
 //     }
