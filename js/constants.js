@@ -1,1 +1,3 @@
-export const BASE_URL = "https://cors.noroff.dev/https://inaforseth.no/cms/wp-json/wc/store/products";
+export const BASE_URL = "https://cors.noroff.dev/https://inaforseth.no/wp/wp-json/wc/store/products";
+
+// https://cors.noroff.dev/https://inaforseth.no/wp/wp-json/wc/store/products
