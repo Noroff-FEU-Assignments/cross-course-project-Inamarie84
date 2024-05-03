@@ -1,4 +1,4 @@
-import { BASE_URL} from "../constants.js";
+import { BASE_URL } from "../constants.js";
 
 export async function fetchJacket(id) {
   const url = `${BASE_URL}${id}`;

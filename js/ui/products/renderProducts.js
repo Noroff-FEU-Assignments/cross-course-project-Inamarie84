@@ -2,19 +2,19 @@ export function renderProducts(targetElement, products) {
     const element = document.querySelector(targetElement);
     element.innerHTML = "";
 
-    const productHtml = products.map(function (product) {
+    const productsHtml = products.map(function (product) {
         return createHtmlForProduct(product);
       });
     
-      console.log(productHtml);
-      element.append(...productHtml);
+      console.log(productsHtml);
+      element.append(...productsHtml);
     }
     
     function createHtmlForProduct(product) {
       const { name, id } = product;
       const productItem = document.createElement("a");
       productItem.classList.add("product");
-      productItem.setAttribute("href", `product.html?id=${id}`);
+      productItem.setAttribute("href", `viewproductdetails.html?id=${id}`);
       const title = document.createElement("h4");
       title.innerText = name;
       productItem.appendChild(title);

@@ -4,6 +4,7 @@ import { displayMessage } from "../../ui/shared/displayMessage.js";
 import { renderProductThumbnails } from "../../ui/products/renderProductThumbnails.js";
 import { renderProducts } from "../../ui/products/renderProducts.js";
 
+
 export async function displayJackets() {
   console.log("displayProducts");
   try {
@@ -14,7 +15,7 @@ export async function displayJackets() {
     // display products
   } catch (error) {
     // display error to the user
-    console.error(error);
+    // console.error(error);
     displayMessage(
       "#products-container",
       "error",

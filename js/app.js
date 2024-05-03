@@ -6,13 +6,15 @@ const { pathname } = location;
 console.log(pathname);
 
 switch (pathname) {
-  case "/":
-  case "/index.html":
-    displayJackets();
-    break;
   case "/viewproductdetails.html":
     displayJacket();
     break;
+  case "/femalejackets.html":
+    displayJackets();
+    break;
+  case "/malejackets.html":
+      displayJackets();
+      break;
 }
 
 
