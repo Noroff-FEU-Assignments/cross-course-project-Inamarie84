@@ -14,6 +14,7 @@ export async function displayJackets() {
     renderProductThumbnails("#thumbnails-container", products);
     // display products
   } catch (error) {
+    console.log(error);
     // display error to the user
     // console.error(error);
     displayMessage(

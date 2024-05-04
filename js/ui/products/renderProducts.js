@@ -20,7 +20,7 @@ function createHtmlForProduct(product) {
     const productLink = document.createElement("a");
     productLink.setAttribute("href", `product.html?id=${id}`);
 
-    const title = document.createElement("h4");
+    const title = document.createElement("h2");
     title.innerText = name;
     productLink.appendChild(title);
 
