@@ -817,7 +817,7 @@ hr {
 
 /* Footer */
 
-footer {
+/* footer {
   display: flex;
   justify-content: space-between;
 }
@@ -826,6 +826,29 @@ footer p {
   bottom: 0px;
   color: var(--color-footer);
   margin: 10px;
+  letter-spacing: 1px;
+}
+
+footer i {
+  padding: 5px;
+} */
+
+/* Footer */
+
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--color-main);
+  padding: 20px; /* Example padding */
+}
+
+footer p {
+  color: var(--color-footer);
+  margin: 10px 30px 10px 10px;
   letter-spacing: 1px;
 }
 
