@@ -817,24 +817,6 @@ hr {
 
 /* Footer */
 
-/* footer {
-  display: flex;
-  justify-content: space-between;
-}
-
-footer p {
-  bottom: 0px;
-  color: var(--color-footer);
-  margin: 10px;
-  letter-spacing: 1px;
-}
-
-footer i {
-  padding: 5px;
-} */
-
-/* Footer */
-
 footer {
   position: fixed;
   bottom: 0;
