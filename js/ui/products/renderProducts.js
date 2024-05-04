@@ -4,19 +4,32 @@ export function renderProducts(targetElement, products) {
 
     const productsHtml = products.map(function (product) {
         return createHtmlForProduct(product);
-      });
+    });
     
-      console.log(productsHtml);
-      element.append(...productsHtml);
-    }
+    console.log(productsHtml);
+    element.append(...productsHtml);
+}
+
+function createHtmlForProduct(product) {
+    const { name, id, prices } = product;
+    const { price } = prices;
     
-    function createHtmlForProduct(product) {
-      const { name, id } = product;
-      const productItem = document.createElement("a");
-      productItem.classList.add("product");
-      productItem.setAttribute("href", `product.html?id=${id}`);
-      const title = document.createElement("h4");
-      title.innerText = name;
-      productItem.appendChild(title);
-      return productItem;
-    }
+    const productItem = document.createElement("div");
+    productItem.classList.add("product");
+
+    const productLink = document.createElement("a");
+    productLink.setAttribute("href", `product.html?id=${id}`);
+
+    const title = document.createElement("h4");
+    title.innerText = name;
+    productLink.appendChild(title);
+
+    const priceElement = document.createElement("p");
+    priceElement.innerText = `Price: $${price}`;
+    
+    productItem.appendChild(productLink);
+    productItem.appendChild(priceElement);
+
+    return productItem;
+}
+

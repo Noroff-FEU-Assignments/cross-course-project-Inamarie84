@@ -18,10 +18,11 @@ export async function displayJackets() {
     // console.error(error);
     displayMessage(
       "error",
-      "Ooops...There was an error fetching the jackets"
+      "Ooops There was an error fetching the jackets"
     );
   }
 }
+
 
 
 

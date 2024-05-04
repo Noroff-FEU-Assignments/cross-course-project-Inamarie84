@@ -13,8 +13,8 @@ switch (pathname) {
     displayJackets();
     break;
   case "/malejackets.html":
-      displayJackets();
-      break;
+    displayJackets();
+    break;
 }
 
 
