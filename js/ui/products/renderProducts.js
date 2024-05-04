@@ -11,9 +11,9 @@ export function renderProducts(targetElement, products) {
 }
 
 function createHtmlForProduct(product) {
-    const { name, id, prices } = product;
+    const { name, id, prices, is_in_stock } = product;
     const { price } = prices;
-    
+
     const productItem = document.createElement("div");
     productItem.classList.add("product");
 
@@ -26,10 +26,15 @@ function createHtmlForProduct(product) {
 
     const priceElement = document.createElement("p");
     priceElement.innerText = `Price: $${price}`;
-    
+
+    const stockAvailability = document.createElement("p");
+    stockAvailability.innerText = is_in_stock ? 'In stock' : 'Out of stock';
+
     productItem.appendChild(productLink);
     productItem.appendChild(priceElement);
+    productItem.appendChild(stockAvailability);
 
     return productItem;
 }
+
 

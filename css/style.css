@@ -25,9 +25,6 @@ html {
 body {
   min-height: 100vh;
   margin: 0px;
-}
-
-main {
   padding-bottom: 100px;
 }
 
@@ -395,27 +392,6 @@ textarea {
   display: flex;
   flex-direction: column;
 }
-
-/* Specific Product*/
-
-/* .flex-container {
-  max-width: 1000px;
-  height: auto;
-  display: grid;
-  grid-template-columns: 1 fr, 1fr;
-  justify-content: center; 
-  align-items: center; 
-  background-color: var(--color-shade);
-  color: var(--color-font);
-  margin: 100px; 
-}
-
-.flex-child {
-  flex: 1;
-  align-self: stretch; 
-  padding: 20px;
-} */
-
 
 .detail-image {
   display: flex;
