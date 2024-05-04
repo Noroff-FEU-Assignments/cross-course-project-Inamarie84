@@ -7,7 +7,7 @@ console.log(pathname);
 
 switch (pathname) {
   case "/":
-    case "/index.html":
+  case "/index.html":
       displayProducts();
   case "/product.html":
     displayJacket();
@@ -16,6 +16,12 @@ switch (pathname) {
     displayJackets();
     break;
   case "/malejackets.html":
+    displayJackets();
+    break;
+  case "/malejackets":
+  displayJackets();
+    break;
+  case "/femalejackets.html":
     displayJackets();
     break;
 }
