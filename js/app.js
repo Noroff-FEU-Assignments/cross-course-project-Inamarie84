@@ -6,9 +6,6 @@ const { pathname } = location;
 console.log(pathname);
 
 switch (pathname) {
-  case "/":
-  case "/index.html":
-      displayProducts();
   case "/product.html":
     displayJacket();
     break;
