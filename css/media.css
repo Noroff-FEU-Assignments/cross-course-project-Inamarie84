@@ -1,8 +1,7 @@
 /* ------------- media queries ------------- */
 @media (max-width: 925px) {
   .intro-men,
-  .intro-women,
-  .bg-product {
+  .intro-women {
     background-image: none;
     background-color: #2f5761;
     color: var(--color-product);
@@ -20,13 +19,10 @@
     padding: 5px;
   }
 
-  .featured-products, .thumbnail-container {
+  .featured-products,
+  .thumbnail-container {
     grid-template-columns: repeat(3, minmax(0, 1fr));
     text-align: center;
-  }
-
-  .test2 {
-    display: none;
   }
 }
 
@@ -76,11 +72,6 @@
     justify-items: center;
   }
 
-  .item-count {
-    top: 32px; /* Adjust as needed for vertical spacing */
-    right: 50px; /* Adjust as needed for horizontal spacing */
- }
-
   .background {
     padding-top: 0px;
   }
@@ -100,13 +91,10 @@
   }
 
   .main-page h2,
-  .co-success h2,
   .about h1,
   .contact_h1,
-  .order_h1,
-  .section-sp h1,
   .product-container h1,
-  .cart-product h2 {
+  .cart-h1 {
     font-size: 26px;
     text-align: center;
   }
@@ -120,25 +108,18 @@
   .contact_h2,
   .contact_p,
   .contact-input,
-  .sp,
-  .order,
   .product-container p,
   .price {
     font-size: 16px;
   }
 
   .about,
-  .contact-form,
-  .order-form,
-  .co-success {
+  .contact-form {
     margin: 10px 25px;
   }
 
-  .co-success a img {
-    margin: auto;
-  }
-
-  .cart-container, .product-container {
+  .cart-container,
+  .product-container {
     margin: 10px 20px;
   }
 
@@ -149,18 +130,13 @@
     font-size: 20px;
   }
 
-  .featured-products, .thumbnail-container {
+  .featured-products,
+  .thumbnail-container {
     grid-template-columns: repeat(2, minmax(0, 1fr));
     text-align: center;
   }
 
   /*other*/
-
-  .co_form,
-  .flex-container,
-  .information {
-    flex-direction: column;
-  }
 
   .product-size,
   .choose-size {
@@ -169,7 +145,6 @@
   }
 
   /*footer*/
-
   footer {
     flex-direction: column;
     text-align: center;
@@ -181,7 +156,8 @@
     margin: 0px;
   }
 
-  .featured-products, .thumbnail-container {
+  .featured-products,
+  .thumbnail-container {
     grid-template-columns: repeat(1, minmax(0, 1fr));
     text-align: center;
   }
@@ -191,7 +167,6 @@
     margin: 10px 20px;
   }
 
-  .order,
   .contact-input label {
     margin-left: 25px;
   }
@@ -200,9 +175,7 @@
     margin-left: 25px;
   }
 
-  .cta,
-  .cta-co-success,
-  .cta-sc2 {
+  .cta {
     padding: 10px 30px;
     font-size: 12px;
   }

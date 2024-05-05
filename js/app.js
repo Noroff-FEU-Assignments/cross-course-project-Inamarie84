@@ -16,11 +16,9 @@ switch (pathname) {
     displayJackets();
     break;
   case "/malejackets":
-  displayJackets();
+    displayJackets();
     break;
   case "/femalejackets":
     displayJackets();
     break;
 }
-
-

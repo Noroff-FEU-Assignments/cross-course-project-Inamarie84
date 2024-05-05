@@ -14,8 +14,9 @@ export function renderProductThumbnails(targetElement, products) {
 }
 
 function createHtmlForProductThumbnail(product) {
-  const { name, prices } = product;
-  const src = product.images?.[0]?.thumbnail || "https://placehold.co/600x400/EEE/31343C";
+  const { name } = product;
+  const src =
+    product.images?.[0]?.thumbnail || "https://placehold.co/600x400/EEE/31343C";
   const alt = product.images?.[0]?.alt || "No image available";
 
   const thumbnail = document.createElement("div");
@@ -28,7 +29,7 @@ function createHtmlForProductThumbnail(product) {
   img.setAttribute("src", src);
   img.setAttribute("alt", alt);
 
-  const titleElement = document.createElement("h2");
+  const titleElement = document.createElement("h4");
   titleElement.innerText = name;
 
   productLink.appendChild(img);

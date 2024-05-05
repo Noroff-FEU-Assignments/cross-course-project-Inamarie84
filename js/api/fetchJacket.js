@@ -13,13 +13,3 @@ export async function fetchJacket(id) {
   const json = await response.json();
   return json;
 }
-
-
-
-
-
-
-
-
-
-
