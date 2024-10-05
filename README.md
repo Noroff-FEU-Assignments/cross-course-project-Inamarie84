@@ -3,7 +3,7 @@ cross-course-project-Inamarie84 created by GitHub Classroom
 
 ## Rainy Days
 
-Here is a screenshot of my portfolio website:
+Here is a screenshot of my Rainy Days website:
 
 [![Screenshot](https://github.com/user-attachments/assets/56342d50-5f70-4af4-9c89-564033f84500)](https://cross-course-inamarie84.netlify.app/)
 
