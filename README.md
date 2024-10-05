@@ -11,7 +11,7 @@ Click the image above to visit the website or click the link below:
 
 [Hosted application demo link](https://cross-course-inamarie84.netlify.app/)
 
-Repository:
+Github repository:
 
 [Repository link](https://github.com/Noroff-FEU-Assignments/cross-course-project-Inamarie84)
 
