@@ -24,7 +24,7 @@ This is a website selling rain jackets using an external API. On the Rainy Days 
 
 To modify the excisting cross-course hardcoded project, Rainy Days, to fetch products from an external API. 
 
-The product list page should present a comprehensive display of all products retrieved from the API, allowing users to click on an individual product to view its details on a dedicated product detail page. Ensure that the product data is not hardcoded in the HTML; instead, it should be dynamically fetched from the API to reflect the most current information. Your API calls should include a loading indicator to inform users that data is being retrieved. Additionally, implement error handling to manage any potential issues that may arise during the data fetching process, displaying an appropriate message to the user when necessary. Finally, thoroughly test your project to confirm that it functions as intended.
+The product list page should present a comprehensive display of all products retrieved from the API, allowing users to click on an individual product to view its details on a dedicated product detail page. Ensure that the product data is not hardcoded in the HTML; instead, it should be dynamically fetched from the API to reflect the most current information. API calls should include a loading indicator to inform users that data is being retrieved. Additionally, implement error handling to manage any potential issues that may arise during the data fetching process, displaying an appropriate message to the user when necessary. Finally, thoroughly test your project to confirm that it functions as intended.
 
 ## Built with
 
