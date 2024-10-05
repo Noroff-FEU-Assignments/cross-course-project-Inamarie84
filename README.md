@@ -13,7 +13,7 @@ Click the image above to visit the website or click the link below:
 
 Github repository:
 
-[Repository link](https://github.com/Noroff-FEU-Assignments/cross-course-project-Inamarie84)
+[Repository link](https://github.com/Noroff-FEU-Assignments/cross-course-project-Inamarie84/tree/cms-ca))
 
 ## Description
 
