@@ -41,9 +41,9 @@ Front-end Components:
 
 Installing
 
-1. Clone the repo:
+1. Clone the repository:
 ```bash
-git clone git@github.com:https://github.com/Noroff-FEU-Assignments/cross-course-project-Inamarie84
+git clone https://github.com/Noroff-FEU-Assignments/cross-course-project-Inamarie84.git
 ```
 
 2. Install dependencies:
@@ -60,7 +60,7 @@ npm run start
 ```
 ## Contributing
 
-If you have any suggestions that would improve this project, you can fork the repo and create a pull request.
+If you have any suggestions that would improve this project, please fork the repository and create a pull request.
 
 ## Contact
 
