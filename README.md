@@ -41,7 +41,7 @@ Installing
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/Noroff-FEU-Assignments/cross-course-project-Inamarie84.git
+git clone https://github.com/Noroff-FEU-Assignments/cross-course-project-Inamarie84/tree/cms-ca.git
 ```
 
 2. Install dependencies:
